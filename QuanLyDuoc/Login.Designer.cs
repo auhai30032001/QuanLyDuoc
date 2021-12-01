@@ -257,11 +257,11 @@ namespace QuanLyDuoc
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(115, 577);
+            this.label1.Location = new System.Drawing.Point(152, 574);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 23);
+            this.label1.Size = new System.Drawing.Size(228, 23);
             this.label1.TabIndex = 44;
-            this.label1.Text = "You forgot password?";
+            this.label1.Text = "Bạn muốn đổi mật khẩu?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Login

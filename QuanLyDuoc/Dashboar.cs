@@ -163,17 +163,7 @@ namespace QuanLyDuoc
             this.Hide();
         }
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-       //Le au hai 1
-
-       
-
+     
         private void guna2PictureBox37_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -183,11 +173,19 @@ namespace QuanLyDuoc
         {
             Transacion obj = new Transacion();
             obj.Show();
+            this.Hide();
         }
 
         private void getSellcb_SelectionChangeCommitted_1(object sender, EventArgs e)
         {
             SumAmountBySeller();
+        }
+
+        private void guna2CustomGradientPanel20_Click(object sender, EventArgs e)
+        {
+            Medicne obj = new Medicne();
+            obj.Show();
+            this.Hide();
         }
     }
 }

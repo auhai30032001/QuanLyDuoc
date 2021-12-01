@@ -30,17 +30,15 @@ namespace QuanLyDuoc
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SDOB = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.SGenCb = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.SellDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.DeleteBtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.SPassTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.EditBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SaveBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SPhoneTb = new Guna.UI2.WinForms.Guna2TextBox();
@@ -107,7 +105,7 @@ namespace QuanLyDuoc
             this.SDOB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SDOB.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.SDOB.HoverState.Parent = this.SDOB;
-            this.SDOB.Location = new System.Drawing.Point(614, 111);
+            this.SDOB.Location = new System.Drawing.Point(769, 105);
             this.SDOB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.SDOB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.SDOB.Name = "SDOB";
@@ -115,16 +113,6 @@ namespace QuanLyDuoc
             this.SDOB.Size = new System.Drawing.Size(265, 36);
             this.SDOB.TabIndex = 38;
             this.SDOB.Value = new System.DateTime(2021, 11, 26, 20, 48, 2, 809);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(897, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 28);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "Mật khẩu";
             // 
             // SGenCb
             // 
@@ -173,30 +161,30 @@ namespace QuanLyDuoc
             // 
             // SellDGV
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            this.SellDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.SellDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.SellDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SellDGV.BackgroundColor = System.Drawing.Color.White;
             this.SellDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SellDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.SellDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SellDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SellDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.SellDGV.ColumnHeadersHeight = 26;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SellDGV.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SellDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.SellDGV.EnableHeadersVisualStyles = false;
             this.SellDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SellDGV.Location = new System.Drawing.Point(21, 307);
@@ -251,32 +239,6 @@ namespace QuanLyDuoc
             this.DeleteBtn.TabIndex = 29;
             this.DeleteBtn.Text = "Xóa";
             this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click_1);
-            // 
-            // SPassTb
-            // 
-            this.SPassTb.Animated = true;
-            this.SPassTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.SPassTb.BorderRadius = 15;
-            this.SPassTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SPassTb.DefaultText = "";
-            this.SPassTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.SPassTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.SPassTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SPassTb.DisabledState.Parent = this.SPassTb;
-            this.SPassTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.SPassTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SPassTb.FocusedState.Parent = this.SPassTb;
-            this.SPassTb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.SPassTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SPassTb.HoverState.Parent = this.SPassTb;
-            this.SPassTb.Location = new System.Drawing.Point(902, 108);
-            this.SPassTb.Name = "SPassTb";
-            this.SPassTb.PasswordChar = '\0';
-            this.SPassTb.PlaceholderText = "";
-            this.SPassTb.SelectedText = "";
-            this.SPassTb.ShadowDecoration.Parent = this.SPassTb;
-            this.SPassTb.Size = new System.Drawing.Size(174, 39);
-            this.SPassTb.TabIndex = 37;
             // 
             // EditBtn
             // 
@@ -416,8 +378,6 @@ namespace QuanLyDuoc
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.White;
             this.guna2Panel6.Controls.Add(this.SDOB);
-            this.guna2Panel6.Controls.Add(this.SPassTb);
-            this.guna2Panel6.Controls.Add(this.label9);
             this.guna2Panel6.Controls.Add(this.SGenCb);
             this.guna2Panel6.Controls.Add(this.label8);
             this.guna2Panel6.Controls.Add(this.label6);
@@ -443,7 +403,7 @@ namespace QuanLyDuoc
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(598, 70);
+            this.label6.Location = new System.Drawing.Point(753, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 28);
             this.label6.TabIndex = 32;
@@ -472,7 +432,7 @@ namespace QuanLyDuoc
             this.SAddTb.PlaceholderText = "";
             this.SAddTb.SelectedText = "";
             this.SAddTb.ShadowDecoration.Parent = this.SAddTb;
-            this.SAddTb.Size = new System.Drawing.Size(318, 39);
+            this.SAddTb.Size = new System.Drawing.Size(412, 39);
             this.SAddTb.TabIndex = 17;
             // 
             // SNameTb
@@ -824,13 +784,11 @@ namespace QuanLyDuoc
         #endregion
 
         private Guna.UI2.WinForms.Guna2DateTimePicker SDOB;
-        private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2ComboBox SGenCb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2DataGridView SellDGV;
         private Guna.UI2.WinForms.Guna2GradientButton DeleteBtn;
-        private Guna.UI2.WinForms.Guna2TextBox SPassTb;
         private Guna.UI2.WinForms.Guna2GradientButton EditBtn;
         private Guna.UI2.WinForms.Guna2GradientButton SaveBtn;
         private Guna.UI2.WinForms.Guna2TextBox SPhoneTb;

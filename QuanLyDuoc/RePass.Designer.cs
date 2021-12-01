@@ -36,28 +36,28 @@ namespace QuanLyDuoc
             this.label35 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox33 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.PassTb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.UNameTb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.RePassTb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.REmailTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ConfirmPassTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.GiaodichDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.AcountDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GiaodichDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcountDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,6 +97,19 @@ namespace QuanLyDuoc
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 39;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::QuanLyDuoc.Properties.Resources._756883;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(435, 3);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(52, 43);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 37;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
             // guna2PictureBox33
             // 
@@ -141,73 +154,61 @@ namespace QuanLyDuoc
             this.LoginBtn.Size = new System.Drawing.Size(155, 45);
             this.LoginBtn.TabIndex = 49;
             this.LoginBtn.Text = "Lưu";
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
-            // PassTb
+            // RePassTb
             // 
-            this.PassTb.Animated = true;
-            this.PassTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.PassTb.BorderRadius = 20;
-            this.PassTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PassTb.DefaultText = "";
-            this.PassTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.PassTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.PassTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.PassTb.DisabledState.Parent = this.PassTb;
-            this.PassTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.PassTb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.PassTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PassTb.FocusedState.Parent = this.PassTb;
-            this.PassTb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.PassTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PassTb.HoverState.Parent = this.PassTb;
-            this.PassTb.Location = new System.Drawing.Point(105, 404);
-            this.PassTb.Name = "PassTb";
-            this.PassTb.PasswordChar = '\0';
-            this.PassTb.PlaceholderText = "Password...";
-            this.PassTb.SelectedText = "";
-            this.PassTb.ShadowDecoration.Parent = this.PassTb;
-            this.PassTb.Size = new System.Drawing.Size(303, 49);
-            this.PassTb.TabIndex = 47;
+            this.RePassTb.Animated = true;
+            this.RePassTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.RePassTb.BorderRadius = 20;
+            this.RePassTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.RePassTb.DefaultText = "";
+            this.RePassTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.RePassTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.RePassTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.RePassTb.DisabledState.Parent = this.RePassTb;
+            this.RePassTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.RePassTb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.RePassTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RePassTb.FocusedState.Parent = this.RePassTb;
+            this.RePassTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RePassTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RePassTb.HoverState.Parent = this.RePassTb;
+            this.RePassTb.Location = new System.Drawing.Point(105, 404);
+            this.RePassTb.Name = "RePassTb";
+            this.RePassTb.PasswordChar = '\0';
+            this.RePassTb.PlaceholderText = "Old Password...";
+            this.RePassTb.SelectedText = "";
+            this.RePassTb.ShadowDecoration.Parent = this.RePassTb;
+            this.RePassTb.Size = new System.Drawing.Size(303, 49);
+            this.RePassTb.TabIndex = 47;
             // 
-            // UNameTb
+            // REmailTb
             // 
-            this.UNameTb.Animated = true;
-            this.UNameTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.UNameTb.BorderRadius = 20;
-            this.UNameTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UNameTb.DefaultText = "";
-            this.UNameTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.UNameTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.UNameTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UNameTb.DisabledState.Parent = this.UNameTb;
-            this.UNameTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UNameTb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.UNameTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UNameTb.FocusedState.Parent = this.UNameTb;
-            this.UNameTb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.UNameTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UNameTb.HoverState.Parent = this.UNameTb;
-            this.UNameTb.Location = new System.Drawing.Point(105, 313);
-            this.UNameTb.Name = "UNameTb";
-            this.UNameTb.PasswordChar = '\0';
-            this.UNameTb.PlaceholderText = "Email...";
-            this.UNameTb.SelectedText = "";
-            this.UNameTb.ShadowDecoration.Parent = this.UNameTb;
-            this.UNameTb.Size = new System.Drawing.Size(303, 49);
-            this.UNameTb.TabIndex = 45;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::QuanLyDuoc.Properties.Resources._756883;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(435, 3);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(52, 43);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 37;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            this.REmailTb.Animated = true;
+            this.REmailTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.REmailTb.BorderRadius = 20;
+            this.REmailTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.REmailTb.DefaultText = "";
+            this.REmailTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.REmailTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.REmailTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.REmailTb.DisabledState.Parent = this.REmailTb;
+            this.REmailTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.REmailTb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.REmailTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.REmailTb.FocusedState.Parent = this.REmailTb;
+            this.REmailTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.REmailTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.REmailTb.HoverState.Parent = this.REmailTb;
+            this.REmailTb.Location = new System.Drawing.Point(105, 313);
+            this.REmailTb.Name = "REmailTb";
+            this.REmailTb.PasswordChar = '\0';
+            this.REmailTb.PlaceholderText = "Email...";
+            this.REmailTb.SelectedText = "";
+            this.REmailTb.ShadowDecoration.Parent = this.REmailTb;
+            this.REmailTb.Size = new System.Drawing.Size(303, 49);
+            this.REmailTb.TabIndex = 45;
             // 
             // guna2CirclePictureBox2
             // 
@@ -235,32 +236,32 @@ namespace QuanLyDuoc
             this.guna2CirclePictureBox1.TabIndex = 46;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // guna2TextBox1
+            // ConfirmPassTb
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.BorderRadius = 20;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(105, 496);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Confirm Password...";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(303, 49);
-            this.guna2TextBox1.TabIndex = 50;
+            this.ConfirmPassTb.Animated = true;
+            this.ConfirmPassTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.ConfirmPassTb.BorderRadius = 20;
+            this.ConfirmPassTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ConfirmPassTb.DefaultText = "";
+            this.ConfirmPassTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ConfirmPassTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ConfirmPassTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ConfirmPassTb.DisabledState.Parent = this.ConfirmPassTb;
+            this.ConfirmPassTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ConfirmPassTb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.ConfirmPassTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ConfirmPassTb.FocusedState.Parent = this.ConfirmPassTb;
+            this.ConfirmPassTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ConfirmPassTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ConfirmPassTb.HoverState.Parent = this.ConfirmPassTb;
+            this.ConfirmPassTb.Location = new System.Drawing.Point(105, 496);
+            this.ConfirmPassTb.Name = "ConfirmPassTb";
+            this.ConfirmPassTb.PasswordChar = '\0';
+            this.ConfirmPassTb.PlaceholderText = "New Password...";
+            this.ConfirmPassTb.SelectedText = "";
+            this.ConfirmPassTb.ShadowDecoration.Parent = this.ConfirmPassTb;
+            this.ConfirmPassTb.Size = new System.Drawing.Size(303, 49);
+            this.ConfirmPassTb.TabIndex = 50;
             // 
             // guna2CirclePictureBox3
             // 
@@ -275,15 +276,15 @@ namespace QuanLyDuoc
             this.guna2CirclePictureBox3.TabIndex = 51;
             this.guna2CirclePictureBox3.TabStop = false;
             // 
-            // GiaodichDGV
+            // AcountDGV
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.GiaodichDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.GiaodichDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GiaodichDGV.BackgroundColor = System.Drawing.Color.Silver;
-            this.GiaodichDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GiaodichDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.GiaodichDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.AcountDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.AcountDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AcountDGV.BackgroundColor = System.Drawing.Color.Silver;
+            this.AcountDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AcountDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.AcountDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -291,8 +292,8 @@ namespace QuanLyDuoc
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GiaodichDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.GiaodichDGV.ColumnHeadersHeight = 26;
+            this.AcountDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.AcountDGV.ColumnHeadersHeight = 26;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -300,38 +301,39 @@ namespace QuanLyDuoc
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GiaodichDGV.DefaultCellStyle = dataGridViewCellStyle6;
-            this.GiaodichDGV.EnableHeadersVisualStyles = false;
-            this.GiaodichDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.GiaodichDGV.Location = new System.Drawing.Point(521, 76);
-            this.GiaodichDGV.Name = "GiaodichDGV";
-            this.GiaodichDGV.RowHeadersVisible = false;
-            this.GiaodichDGV.RowHeadersWidth = 51;
-            this.GiaodichDGV.RowTemplate.Height = 24;
-            this.GiaodichDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GiaodichDGV.Size = new System.Drawing.Size(591, 609);
-            this.GiaodichDGV.TabIndex = 52;
-            this.GiaodichDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.GiaodichDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.GiaodichDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.GiaodichDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.GiaodichDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.GiaodichDGV.ThemeStyle.BackColor = System.Drawing.Color.Silver;
-            this.GiaodichDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.GiaodichDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.GiaodichDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.GiaodichDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.GiaodichDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.GiaodichDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.GiaodichDGV.ThemeStyle.HeaderStyle.Height = 26;
-            this.GiaodichDGV.ThemeStyle.ReadOnly = false;
-            this.GiaodichDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.GiaodichDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.GiaodichDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.GiaodichDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.GiaodichDGV.ThemeStyle.RowsStyle.Height = 24;
-            this.GiaodichDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.GiaodichDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.AcountDGV.DefaultCellStyle = dataGridViewCellStyle6;
+            this.AcountDGV.EnableHeadersVisualStyles = false;
+            this.AcountDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.AcountDGV.Location = new System.Drawing.Point(521, 76);
+            this.AcountDGV.Name = "AcountDGV";
+            this.AcountDGV.RowHeadersVisible = false;
+            this.AcountDGV.RowHeadersWidth = 51;
+            this.AcountDGV.RowTemplate.Height = 24;
+            this.AcountDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.AcountDGV.Size = new System.Drawing.Size(591, 609);
+            this.AcountDGV.TabIndex = 52;
+            this.AcountDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.AcountDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.AcountDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.AcountDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.AcountDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.AcountDGV.ThemeStyle.BackColor = System.Drawing.Color.Silver;
+            this.AcountDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.AcountDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.AcountDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.AcountDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.AcountDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.AcountDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.AcountDGV.ThemeStyle.HeaderStyle.Height = 26;
+            this.AcountDGV.ThemeStyle.ReadOnly = false;
+            this.AcountDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.AcountDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.AcountDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.AcountDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.AcountDGV.ThemeStyle.RowsStyle.Height = 24;
+            this.AcountDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.AcountDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.AcountDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AcountDGV_CellClick);
             // 
             // label1
             // 
@@ -365,14 +367,14 @@ namespace QuanLyDuoc
             this.ClientSize = new System.Drawing.Size(1124, 690);
             this.Controls.Add(this.guna2PictureBox3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.GiaodichDGV);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.AcountDGV);
+            this.Controls.Add(this.ConfirmPassTb);
             this.Controls.Add(this.guna2CirclePictureBox3);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.PassTb);
-            this.Controls.Add(this.UNameTb);
+            this.Controls.Add(this.RePassTb);
+            this.Controls.Add(this.REmailTb);
             this.Controls.Add(this.guna2CirclePictureBox2);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -381,12 +383,12 @@ namespace QuanLyDuoc
             this.Text = "RePass";
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GiaodichDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcountDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -403,13 +405,13 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button LoginBtn;
-        private Guna.UI2.WinForms.Guna2TextBox PassTb;
-        private Guna.UI2.WinForms.Guna2TextBox UNameTb;
+        private Guna.UI2.WinForms.Guna2TextBox RePassTb;
+        private Guna.UI2.WinForms.Guna2TextBox REmailTb;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox ConfirmPassTb;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
-        private Guna.UI2.WinForms.Guna2DataGridView GiaodichDGV;
+        private Guna.UI2.WinForms.Guna2DataGridView AcountDGV;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }

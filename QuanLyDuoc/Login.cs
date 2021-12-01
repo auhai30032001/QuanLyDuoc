@@ -55,7 +55,7 @@ namespace QuanLyDuoc
             else
             {
                 Con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from SellerTbl where SName='" + UNameTb.Text + "' and SPass='" + PassTb.Text + "'", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Acount where Email='" + UNameTb.Text + "' and Password='" + PassTb.Text + "'", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 if (dt.Rows[0][0].ToString() == "1")
@@ -91,6 +91,11 @@ namespace QuanLyDuoc
             RePass obj = new RePass();
             obj.Show();
             this.Hide();
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

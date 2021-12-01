@@ -133,17 +133,6 @@ namespace QuanLyDuoc
             }
         }
 
-       
-
-       
-
-
-
-
-
-
-
-
         private void guna2GradientButton1_Click_1(object sender, EventArgs e)
         {
             insertBill();
@@ -206,6 +195,7 @@ namespace QuanLyDuoc
         {
             Manufacturer obj = new Manufacturer();
             obj.Show();
+            this.Hide();
         }
 
         private void guna2PictureBox1_Click_1(object sender, EventArgs e)

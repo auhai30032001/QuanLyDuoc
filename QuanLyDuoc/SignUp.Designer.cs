@@ -38,8 +38,8 @@ namespace QuanLyDuoc
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.LoginBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.PassTb = new Guna.UI2.WinForms.Guna2TextBox();
-            this.UNameTb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.PasswordTb = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Acount = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -145,60 +145,61 @@ namespace QuanLyDuoc
             this.LoginBtn.Size = new System.Drawing.Size(155, 45);
             this.LoginBtn.TabIndex = 49;
             this.LoginBtn.Text = "Đăng ký";
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
-            // PassTb
+            // PasswordTb
             // 
-            this.PassTb.Animated = true;
-            this.PassTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.PassTb.BorderRadius = 20;
-            this.PassTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PassTb.DefaultText = "";
-            this.PassTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.PassTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.PassTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.PassTb.DisabledState.Parent = this.PassTb;
-            this.PassTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.PassTb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.PassTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PassTb.FocusedState.Parent = this.PassTb;
-            this.PassTb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.PassTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PassTb.HoverState.Parent = this.PassTb;
-            this.PassTb.Location = new System.Drawing.Point(120, 386);
-            this.PassTb.Name = "PassTb";
-            this.PassTb.PasswordChar = '\0';
-            this.PassTb.PlaceholderText = "Password...";
-            this.PassTb.SelectedText = "";
-            this.PassTb.ShadowDecoration.Parent = this.PassTb;
-            this.PassTb.Size = new System.Drawing.Size(303, 49);
-            this.PassTb.TabIndex = 47;
+            this.PasswordTb.Animated = true;
+            this.PasswordTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.PasswordTb.BorderRadius = 20;
+            this.PasswordTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PasswordTb.DefaultText = "";
+            this.PasswordTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.PasswordTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.PasswordTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PasswordTb.DisabledState.Parent = this.PasswordTb;
+            this.PasswordTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.PasswordTb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.PasswordTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PasswordTb.FocusedState.Parent = this.PasswordTb;
+            this.PasswordTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PasswordTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PasswordTb.HoverState.Parent = this.PasswordTb;
+            this.PasswordTb.Location = new System.Drawing.Point(120, 386);
+            this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.PasswordChar = '\0';
+            this.PasswordTb.PlaceholderText = "Password...";
+            this.PasswordTb.SelectedText = "";
+            this.PasswordTb.ShadowDecoration.Parent = this.PasswordTb;
+            this.PasswordTb.Size = new System.Drawing.Size(303, 49);
+            this.PasswordTb.TabIndex = 47;
             // 
-            // UNameTb
+            // Acount
             // 
-            this.UNameTb.Animated = true;
-            this.UNameTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.UNameTb.BorderRadius = 20;
-            this.UNameTb.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UNameTb.DefaultText = "";
-            this.UNameTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.UNameTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.UNameTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UNameTb.DisabledState.Parent = this.UNameTb;
-            this.UNameTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UNameTb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.UNameTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UNameTb.FocusedState.Parent = this.UNameTb;
-            this.UNameTb.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.UNameTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UNameTb.HoverState.Parent = this.UNameTb;
-            this.UNameTb.Location = new System.Drawing.Point(120, 295);
-            this.UNameTb.Name = "UNameTb";
-            this.UNameTb.PasswordChar = '\0';
-            this.UNameTb.PlaceholderText = "Email...";
-            this.UNameTb.SelectedText = "";
-            this.UNameTb.ShadowDecoration.Parent = this.UNameTb;
-            this.UNameTb.Size = new System.Drawing.Size(303, 49);
-            this.UNameTb.TabIndex = 45;
+            this.Acount.Animated = true;
+            this.Acount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Acount.BorderRadius = 20;
+            this.Acount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Acount.DefaultText = "";
+            this.Acount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Acount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Acount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Acount.DisabledState.Parent = this.Acount;
+            this.Acount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Acount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.Acount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Acount.FocusedState.Parent = this.Acount;
+            this.Acount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Acount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Acount.HoverState.Parent = this.Acount;
+            this.Acount.Location = new System.Drawing.Point(120, 295);
+            this.Acount.Name = "Acount";
+            this.Acount.PasswordChar = '\0';
+            this.Acount.PlaceholderText = "Email...";
+            this.Acount.SelectedText = "";
+            this.Acount.ShadowDecoration.Parent = this.Acount;
+            this.Acount.Size = new System.Drawing.Size(303, 49);
+            this.Acount.TabIndex = 45;
             // 
             // guna2CirclePictureBox2
             // 
@@ -250,9 +251,9 @@ namespace QuanLyDuoc
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.guna2CirclePictureBox2);
-            this.Controls.Add(this.PassTb);
+            this.Controls.Add(this.PasswordTb);
             this.Controls.Add(this.guna2CirclePictureBox1);
-            this.Controls.Add(this.UNameTb);
+            this.Controls.Add(this.Acount);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -280,9 +281,9 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button LoginBtn;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox PassTb;
+        private Guna.UI2.WinForms.Guna2TextBox PasswordTb;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox UNameTb;
+        private Guna.UI2.WinForms.Guna2TextBox Acount;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }

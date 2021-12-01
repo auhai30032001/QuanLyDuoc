@@ -37,7 +37,7 @@ namespace QuanLyDuoc
         {
             SNameTb.Text = "";
             SAddTb.Text = "";
-            SPassTb.Text = "";
+            
             SPhoneTb.Text = "";
             SGenCb.SelectedIndex = 0;
 
@@ -67,7 +67,7 @@ namespace QuanLyDuoc
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (SNameTb.Text == "" || SPhoneTb.Text == "" || SAddTb.Text == "" || SPassTb.Text == "" || SGenCb.SelectedIndex == -1)
+            if (SNameTb.Text == "" || SPhoneTb.Text == "" || SAddTb.Text == ""  || SGenCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin !");
             }
@@ -76,13 +76,13 @@ namespace QuanLyDuoc
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into SellerTbl(SName,SAdd,SPhone,SGen,SDOB,SPass)values(@SN,@SA,@SP,@SG,@SD,@SPA)", Con);
+                    SqlCommand cmd = new SqlCommand("insert into SellerTbl(SName,SAdd,SPhone,SGen,SDOB)values(@SN,@SA,@SP,@SG,@SD)", Con);
                     cmd.Parameters.AddWithValue("@SN", SNameTb.Text);
                     cmd.Parameters.AddWithValue("@SA", SAddTb.Text);
                     cmd.Parameters.AddWithValue("@SP", SPhoneTb.Text);
                     cmd.Parameters.AddWithValue("@SG", SGenCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@SD", SDOB.Value.Date);
-                    cmd.Parameters.AddWithValue("@SPA", SPassTb.Text);
+                    
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã lưu ");
                     Con.Close();
@@ -98,7 +98,7 @@ namespace QuanLyDuoc
 
         private void EditBtn_Click_1(object sender, EventArgs e)
         {
-            if (SNameTb.Text == "" || SPhoneTb.Text == "" || SAddTb.Text == "" || SPassTb.Text == "" || SGenCb.SelectedIndex == -1)
+            if (SNameTb.Text == "" || SPhoneTb.Text == "" || SAddTb.Text == ""  || SGenCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Chọn một dòng để sửa!");
             }
@@ -107,13 +107,13 @@ namespace QuanLyDuoc
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("Update SellerTbl set SName = @SN,SAdd = @SA ,SPhone = @SP,SGen = @SG,SDOB = @SD,SPass = @SPA where SNum = @SKey", Con);
+                    SqlCommand cmd = new SqlCommand("Update SellerTbl set SName = @SN,SAdd = @SA ,SPhone = @SP,SGen = @SG,SDOB = @SD where SNum = @SKey", Con);
                     cmd.Parameters.AddWithValue("@SN", SNameTb.Text);
                     cmd.Parameters.AddWithValue("@SA", SAddTb.Text);
                     cmd.Parameters.AddWithValue("@SP", SPhoneTb.Text);
                     cmd.Parameters.AddWithValue("@SG", SGenCb.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@SD", SDOB.Value.Date);
-                    cmd.Parameters.AddWithValue("@SPA", SPassTb.Text);
+                    
                     cmd.Parameters.AddWithValue("@SKey", Key);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã sửa ");
@@ -139,13 +139,7 @@ namespace QuanLyDuoc
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("Delete from SellerTbl where SNum = @SKey", Con);
-                    cmd.Parameters.AddWithValue("@SN", SNameTb.Text);
-                    cmd.Parameters.AddWithValue("@SA", SAddTb.Text);
-                    cmd.Parameters.AddWithValue("@SP", SPhoneTb.Text);
-                    cmd.Parameters.AddWithValue("@SG", SGenCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@SD", SDOB.Value.Date);
-                    cmd.Parameters.AddWithValue("@SPA", SPassTb.Text);
+                    SqlCommand cmd = new SqlCommand("Delete from SellerTbl where SNum = @SKey", Con);                 
                     cmd.Parameters.AddWithValue("@SKey", Key);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã xóa ");
@@ -170,7 +164,7 @@ namespace QuanLyDuoc
                 SPhoneTb.Text = SellDGV.Rows[e.RowIndex].Cells[3].Value.ToString();
                 SDOB.Text = SellDGV.Rows[e.RowIndex].Cells[2].Value.ToString();
                 SGenCb.SelectedItem = SellDGV.Rows[e.RowIndex].Cells[5].Value.ToString();
-                SPassTb.Text = SellDGV.Rows[e.RowIndex].Cells[6].Value.ToString();
+                
             }
             if (SNameTb.Text == "")
             {

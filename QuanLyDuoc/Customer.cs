@@ -38,26 +38,9 @@ namespace QuanLyDuoc
             CustAddTb.Text = "";
             CustPhoneTb.Text = "";
             CustGenCb.SelectedIndex = 0;
-
-            //Key = 0;
+            Key = 0;
         }
 
-       
-       
-
-        
-        
-        
-        
-        
-
-       
-
-        
-
-        
-
-       
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {

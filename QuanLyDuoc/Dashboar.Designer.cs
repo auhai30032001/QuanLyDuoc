@@ -746,6 +746,7 @@ namespace QuanLyDuoc
             this.guna2CustomGradientPanel20.ShadowDecoration.Parent = this.guna2CustomGradientPanel20;
             this.guna2CustomGradientPanel20.Size = new System.Drawing.Size(347, 96);
             this.guna2CustomGradientPanel20.TabIndex = 45;
+            this.guna2CustomGradientPanel20.Click += new System.EventHandler(this.guna2CustomGradientPanel20_Click);
             // 
             // guna2PictureBox32
             // 

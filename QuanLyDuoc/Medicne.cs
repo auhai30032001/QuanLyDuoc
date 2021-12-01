@@ -81,17 +81,6 @@ namespace QuanLyDuoc
             Con.Close();
         }
 
-
-
-       
-
-        
-
-      
-        
-
-       
-
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -224,21 +213,21 @@ namespace QuanLyDuoc
 
         private void guna2CustomGradientPanel19_Click(object sender, EventArgs e)
         {
-            Medicne obj = new Medicne();
+            Customer obj = new Customer();
             obj.Show();
             this.Hide();
         }
 
         private void guna2CustomGradientPanel18_Click(object sender, EventArgs e)
         {
-            Customer obj = new Customer();
+            Seller obj = new Seller();
             obj.Show();
             this.Hide();
         }
 
         private void guna2CustomGradientPanel17_Click(object sender, EventArgs e)
         {
-            Seller obj = new Seller();
+            Manufacturer obj = new Manufacturer();
             obj.Show();
             this.Hide();
         }

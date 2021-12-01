@@ -172,6 +172,7 @@ namespace QuanLyDuoc
             Medicne obj = new Medicne();
             obj.Show();
             this.Hide();
+
         }
 
         private void guna2CustomGradientPanel19_Click_1(object sender, EventArgs e)
@@ -179,6 +180,7 @@ namespace QuanLyDuoc
             Customer obj = new Customer();
             obj.Show();
             this.Hide();
+
         }
 
         private void guna2CustomGradientPanel18_Click_1(object sender, EventArgs e)
@@ -186,6 +188,7 @@ namespace QuanLyDuoc
             Seller obj = new Seller();
             obj.Show();
             this.Hide();
+
         }
 
         private void guna2PictureBox34_Click_1(object sender, EventArgs e)
@@ -193,6 +196,7 @@ namespace QuanLyDuoc
             Login obj = new Login();
             obj.Show();
             this.Hide();
+
         }
 
         private void guna2PictureBox2_Click_1(object sender, EventArgs e)
