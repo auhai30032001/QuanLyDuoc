@@ -17,4 +17,3 @@ D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuocPham.csproj.CoreCompileInpu
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuocPham.csproj.CopyComplete
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.exe
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.pdb
-D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuocPham.csproj.AssemblyReference.cache

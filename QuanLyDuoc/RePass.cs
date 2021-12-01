@@ -52,32 +52,45 @@ namespace QuanLyDuoc
             this.Hide();
         }
 
+       
+
+        bool a = true;
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             if (RePassTb.Text == "" || REmailTb.Text == "" || ConfirmPassTb.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin !");
             }
-            
+          
             else
-            {
-                try
-                {
+            {              
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("Update Acount set Email = @EM, Password= @PA where IdAcount = @AKey", Con);
-                    cmd.Parameters.AddWithValue("@EM", REmailTb.Text);
-                    cmd.Parameters.AddWithValue("@PA", ConfirmPassTb.Text);                  
-                    cmd.Parameters.AddWithValue("@AKey", Key);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đã Sửa ");
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Acount where Email='" + REmailTb.Text + "' and Password='" + RePassTb.Text + "'", Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    if (dt.Rows[0][0].ToString() == "1")
+                    {
+                       
+                        SqlCommand cmd = new SqlCommand("Update Acount set Email = @EM, Password= @PA where IdAcount = @AKey", Con);
+                        cmd.Parameters.AddWithValue("@EM", REmailTb.Text);
+                        cmd.Parameters.AddWithValue("@PA", ConfirmPassTb.Text);
+                        cmd.Parameters.AddWithValue("@AKey", Key);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đã Sửa ");
+                    Login obj = new Login();
+                    obj.Show();
+                    this.Hide();
                     Con.Close();
-                    ShowAcount();
-                    Reset();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                        Reset();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai mật khẩu cũ !");
+                        
+                    }
+                Con.Close();
+  
             }
         }
         int Key = 0;
@@ -102,3 +115,22 @@ namespace QuanLyDuoc
 }
 
 
+
+/*
+Con.Open();
+SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Acount where Email='" + UNameTb.Text + "' and Password='" + PassTb.Text + "'", Con);
+DataTable dt = new DataTable();
+sda.Fill(dt);
+if (dt.Rows[0][0].ToString() == "1")
+{
+    User = UNameTb.Text;
+    Dashboar obj = new Dashboar();
+    obj.Show();
+    this.Hide();
+    Con.Close();
+}
+else
+{
+    MessageBox.Show("Sai tài khoản hoặc mật khẩu !");
+}
+Con.Close();*/
