@@ -170,7 +170,7 @@ namespace QuanLyDuoc
 
        
 
-       //Le au hai
+       //Le au hai 1
 
        
 
