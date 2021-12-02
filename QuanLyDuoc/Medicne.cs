@@ -16,7 +16,7 @@ namespace QuanLyDuoc
         public Medicne()
         {
             InitializeComponent();
-            ShowMedicine();
+            //ShowMedicine();
             GetManufacturer();
         }
 
@@ -81,6 +81,18 @@ namespace QuanLyDuoc
             Con.Close();
         }
 
+        private void Find()
+        {
+            Con.Open();
+            string Query = "Select * from MedicineTbl where MedName like '%" + FindTb.Text.Trim() + "%'";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            MedDGV.DataSource = dt;
+            Con.Close();
+        }
+
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -107,7 +119,7 @@ namespace QuanLyDuoc
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã lưu");
                     Con.Close();
-                    ShowMedicine();
+                 
                     Reset();
                 }
                 catch (Exception ex)
@@ -121,7 +133,7 @@ namespace QuanLyDuoc
         {
             if (MedNameTb.Text == "" || MedPriceTb.Text == "" || MedQtyTb.Text == "" || MedTypeCb.SelectedIndex == -1 || MedManTb.Text == "")
             {
-                MessageBox.Show("Vui lòng chọn một dòng để sửa ");
+                MessageBox.Show("Thiếu thông tin ! ");
             }
             else
             {
@@ -139,7 +151,7 @@ namespace QuanLyDuoc
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã lưu");
                     Con.Close();
-                    ShowMedicine();
+                   
                     Reset();
                 }
                 catch (Exception ex)
@@ -166,7 +178,7 @@ namespace QuanLyDuoc
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã xóa");
                     Con.Close();
-                    ShowMedicine();
+                  
                     Reset();
                 }
                 catch (Exception ex)
@@ -247,6 +259,48 @@ namespace QuanLyDuoc
         private void MedManCb_SelectionChangeCommitted_1(object sender, EventArgs e)
         {
             GetManName();
+        }
+
+        private void FindTb_TextChanged(object sender, EventArgs e)
+        {
+            Find();
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            ShowMedicine();
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void MedNameTb_TextChanged(object sender, EventArgs e)
+        {
+            if(MedNameTb.Text == "")
+            {
+                SaveBtn.Enabled = false;
+                EditBtn.Enabled = false;
+                DeleteBtn.Enabled = false;
+                guna2GradientButton2.Enabled = false;
+            }
+            else
+            {
+                SaveBtn.Enabled = true;
+                EditBtn.Enabled = true;
+                DeleteBtn.Enabled = true;
+                guna2GradientButton2.Enabled = true;
+            }
+        }
+
+        private void Medicne_Load(object sender, EventArgs e)
+        {
+            MedManCb.SelectedIndex = 0;
+            SaveBtn.Enabled = false;
+            EditBtn.Enabled = false;
+            DeleteBtn.Enabled = false;
+            guna2GradientButton2.Enabled = false;
         }
     }
 }

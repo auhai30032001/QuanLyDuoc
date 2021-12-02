@@ -30,17 +30,18 @@ namespace QuanLyDuoc
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transacion));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel17 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2PictureBox29 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -62,6 +63,7 @@ namespace QuanLyDuoc
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.FindTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
             this.GiaodichDGV = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -121,6 +123,7 @@ namespace QuanLyDuoc
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.guna2CustomGradientPanel17);
             this.guna2Panel1.Controls.Add(this.guna2CustomGradientPanel18);
             this.guna2Panel1.Controls.Add(this.guna2CustomGradientPanel19);
@@ -135,6 +138,16 @@ namespace QuanLyDuoc
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(313, 821);
             this.guna2Panel1.TabIndex = 42;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(149, 752);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 24);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Đăng xuất";
             // 
             // guna2CustomGradientPanel17
             // 
@@ -332,7 +345,7 @@ namespace QuanLyDuoc
             // 
             this.guna2PictureBox34.Image = global::QuanLyDuoc.Properties.Resources._1053210;
             this.guna2PictureBox34.ImageRotate = 0F;
-            this.guna2PictureBox34.Location = new System.Drawing.Point(92, 721);
+            this.guna2PictureBox34.Location = new System.Drawing.Point(45, 723);
             this.guna2PictureBox34.Name = "guna2PictureBox34";
             this.guna2PictureBox34.ShadowDecoration.Parent = this.guna2PictureBox34;
             this.guna2PictureBox34.Size = new System.Drawing.Size(117, 75);
@@ -365,6 +378,7 @@ namespace QuanLyDuoc
             // guna2Panel6
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.guna2Panel6.Controls.Add(this.FindTb);
             this.guna2Panel6.Controls.Add(this.guna2GradientButton1);
             this.guna2Panel6.Controls.Add(this.label1);
             this.guna2Panel6.Controls.Add(this.GiaodichDGV);
@@ -390,6 +404,33 @@ namespace QuanLyDuoc
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
             this.guna2Panel6.Size = new System.Drawing.Size(1113, 738);
             this.guna2Panel6.TabIndex = 44;
+            // 
+            // FindTb
+            // 
+            this.FindTb.Animated = true;
+            this.FindTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.FindTb.BorderRadius = 15;
+            this.FindTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.FindTb.DefaultText = "";
+            this.FindTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.FindTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.FindTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FindTb.DisabledState.Parent = this.FindTb;
+            this.FindTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FindTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FindTb.FocusedState.Parent = this.FindTb;
+            this.FindTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.FindTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FindTb.HoverState.Parent = this.FindTb;
+            this.FindTb.Location = new System.Drawing.Point(189, 332);
+            this.FindTb.Name = "FindTb";
+            this.FindTb.PasswordChar = '\0';
+            this.FindTb.PlaceholderText = "Nhập tên cần tìm...";
+            this.FindTb.SelectedText = "";
+            this.FindTb.ShadowDecoration.Parent = this.FindTb;
+            this.FindTb.Size = new System.Drawing.Size(362, 39);
+            this.FindTb.TabIndex = 49;
+            this.FindTb.TextChanged += new System.EventHandler(this.FindTb_TextChanged);
             // 
             // guna2GradientButton1
             // 
@@ -426,30 +467,30 @@ namespace QuanLyDuoc
             // 
             // GiaodichDGV
             // 
-            dataGridViewCellStyle73.BackColor = System.Drawing.Color.White;
-            this.GiaodichDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle73;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.GiaodichDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.GiaodichDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GiaodichDGV.BackgroundColor = System.Drawing.Color.Silver;
             this.GiaodichDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GiaodichDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.GiaodichDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle74.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle74.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle74.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle74.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle74.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GiaodichDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle74;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GiaodichDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.GiaodichDGV.ColumnHeadersHeight = 26;
-            dataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle75.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle75.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle75.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle75.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle75.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle75.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GiaodichDGV.DefaultCellStyle = dataGridViewCellStyle75;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GiaodichDGV.DefaultCellStyle = dataGridViewCellStyle12;
             this.GiaodichDGV.EnableHeadersVisualStyles = false;
             this.GiaodichDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.GiaodichDGV.Location = new System.Drawing.Point(572, 374);
@@ -575,30 +616,30 @@ namespace QuanLyDuoc
             // 
             // MedicinesDGV
             // 
-            dataGridViewCellStyle76.BackColor = System.Drawing.Color.White;
-            this.MedicinesDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle76;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.MedicinesDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.MedicinesDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.MedicinesDGV.BackgroundColor = System.Drawing.Color.Silver;
             this.MedicinesDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MedicinesDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.MedicinesDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle77.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle77.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle77.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle77.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle77.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MedicinesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle77;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MedicinesDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.MedicinesDGV.ColumnHeadersHeight = 26;
-            dataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle78.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle78.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle78.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle78.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle78.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MedicinesDGV.DefaultCellStyle = dataGridViewCellStyle78;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MedicinesDGV.DefaultCellStyle = dataGridViewCellStyle15;
             this.MedicinesDGV.EnableHeadersVisualStyles = false;
             this.MedicinesDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.MedicinesDGV.Location = new System.Drawing.Point(0, 374);
@@ -706,21 +747,21 @@ namespace QuanLyDuoc
             // 
             // BillDGV
             // 
-            dataGridViewCellStyle79.BackColor = System.Drawing.Color.White;
-            this.BillDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle79;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.BillDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.BillDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.BillDGV.BackgroundColor = System.Drawing.Color.Silver;
             this.BillDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BillDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.BillDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle80.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle80.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle80.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle80.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle80.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BillDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle80;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BillDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.BillDGV.ColumnHeadersHeight = 26;
             this.BillDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -728,14 +769,14 @@ namespace QuanLyDuoc
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle81.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle81.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle81.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle81.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle81.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BillDGV.DefaultCellStyle = dataGridViewCellStyle81;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BillDGV.DefaultCellStyle = dataGridViewCellStyle18;
             this.BillDGV.EnableHeadersVisualStyles = false;
             this.BillDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.BillDGV.Location = new System.Drawing.Point(562, 44);
@@ -803,7 +844,7 @@ namespace QuanLyDuoc
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label10.Location = new System.Drawing.Point(228, 343);
+            this.label10.Location = new System.Drawing.Point(27, 339);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 28);
             this.label10.TabIndex = 31;
@@ -851,11 +892,12 @@ namespace QuanLyDuoc
             this.MedQtyTb.Location = new System.Drawing.Point(294, 96);
             this.MedQtyTb.Name = "MedQtyTb";
             this.MedQtyTb.PasswordChar = '\0';
-            this.MedQtyTb.PlaceholderText = "";
+            this.MedQtyTb.PlaceholderText = "Số lượng cần mua...";
             this.MedQtyTb.SelectedText = "";
             this.MedQtyTb.ShadowDecoration.Parent = this.MedQtyTb;
             this.MedQtyTb.Size = new System.Drawing.Size(213, 39);
             this.MedQtyTb.TabIndex = 17;
+            this.MedQtyTb.TextChanged += new System.EventHandler(this.MedQtyTb_TextChanged);
             // 
             // label4
             // 
@@ -964,6 +1006,7 @@ namespace QuanLyDuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(1444, 821);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.SNameLbl);
@@ -974,6 +1017,7 @@ namespace QuanLyDuoc
             this.Name = "Transacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Transacion";
+            this.Load += new System.EventHandler(this.Transacion_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2CustomGradientPanel17.ResumeLayout(false);
@@ -1064,5 +1108,7 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox35;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox34;
         private System.Windows.Forms.Label label35;
+        private Guna.UI2.WinForms.Guna2TextBox FindTb;
+        private System.Windows.Forms.Label label6;
     }
 }

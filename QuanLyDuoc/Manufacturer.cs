@@ -13,14 +13,25 @@ namespace QuanLyDuoc
 {
     public partial class Manufacturer : Form
     {
+        string IdAcount = "", Email = "", Pass = "", Permission = "";
         public Manufacturer()
         {
             InitializeComponent();
-            ShowManufacturer();
+            
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=.\MSSQL_EXP_2008R2;Initial Catalog=HealthCare;Integrated Security=True");
 
+        public Manufacturer(string IdAcount, string Email, string Pass, string Permission)
+        {
+            InitializeComponent();
+
+            this.IdAcount = IdAcount;
+            this.Email = Email;
+            this.Pass = Pass;
+            this.Permission = Permission;
+
+        }
         private void ShowManufacturer()
         {
             Con.Open();
@@ -30,6 +41,7 @@ namespace QuanLyDuoc
             DataTable dt = new DataTable();
             sda.Fill(dt);
             ManufacturerDGV.DataSource = dt;
+           // Manufacturer obj = new Manufacturer(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString());
             Con.Close();
         }
 
@@ -49,87 +61,122 @@ namespace QuanLyDuoc
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (ManAddTb.Text == "" || ManPhoneTb.Text == "" || ManNameTb.Text == "")
+           if(Permission == "Admin")
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin !");
+                if (ManAddTb.Text == "" || ManPhoneTb.Text == "" || ManNameTb.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập đủ thông tin !");
+                }
+                else
+                {
+                    try
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("insert into ManufacturerTbl(ManName,ManAdd,ManPhone,ManJDate)values(@MN,@MA,@MP,@MJD)", Con);
+                        cmd.Parameters.AddWithValue("@MN", ManNameTb.Text);
+                        cmd.Parameters.AddWithValue("@MA", ManAddTb.Text);
+                        cmd.Parameters.AddWithValue("@MP", ManPhoneTb.Text);
+                        cmd.Parameters.AddWithValue("@MJD", ManJDate.Value.Date);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đã lưu ");
+                        Con.Close();
+
+                        Reset();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
-            else
+           else
+
             {
-                try
-                {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into ManufacturerTbl(ManName,ManAdd,ManPhone,ManJDate)values(@MN,@MA,@MP,@MJD)", Con);
-                    cmd.Parameters.AddWithValue("@MN", ManNameTb.Text);
-                    cmd.Parameters.AddWithValue("@MA", ManAddTb.Text);
-                    cmd.Parameters.AddWithValue("@MP", ManPhoneTb.Text);
-                    cmd.Parameters.AddWithValue("@MJD", ManJDate.Value.Date);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đã lưu ");
-                    Con.Close();
-                    ShowManufacturer();
-                    Reset();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Bạn không có quyền này !");
             }
         }
 
         private void EditBtn_Click_1(object sender, EventArgs e)
         {
-            if (ManAddTb.Text == "" || ManPhoneTb.Text == "" || ManNameTb.Text == "")
+           if(Permission == "Admin")
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin !");
+                if (ManAddTb.Text == "" || ManPhoneTb.Text == "" || ManNameTb.Text == "")
+                {
+                    MessageBox.Show("Thiếu thông tin !");
+                }
+                else
+                {
+                    try
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("Update ManufacturerTbl set ManName = @MN, ManAdd= @MA,ManPhone = @MP,ManJDate = @MJD where ManId = @MKey", Con);
+                        cmd.Parameters.AddWithValue("@MN", ManNameTb.Text);
+                        cmd.Parameters.AddWithValue("@MA", ManAddTb.Text);
+                        cmd.Parameters.AddWithValue("@MP", ManPhoneTb.Text);
+                        cmd.Parameters.AddWithValue("@MJD", ManJDate.Value.Date);
+                        cmd.Parameters.AddWithValue("@MKey", Key);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đã Sửa ");
+                        Con.Close();
+
+                        Reset();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
-            else
+           else
             {
-                try
-                {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("Update ManufacturerTbl set ManName = @MN, ManAdd= @MA,ManPhone = @MP,ManJDate = @MJD where ManId = @MKey", Con);
-                    cmd.Parameters.AddWithValue("@MN", ManNameTb.Text);
-                    cmd.Parameters.AddWithValue("@MA", ManAddTb.Text);
-                    cmd.Parameters.AddWithValue("@MP", ManPhoneTb.Text);
-                    cmd.Parameters.AddWithValue("@MJD", ManJDate.Value.Date);
-                    cmd.Parameters.AddWithValue("@MKey", Key);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đã Sửa ");
-                    Con.Close();
-                    ShowManufacturer();
-                    Reset();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Bạn không có quyền này !");
             }
+        }
+
+        private void Find()
+        {         
+                Con.Open();
+                string Query = "Select * from ManufacturerTbl where ManName like '%" + FindTb.Text.Trim() + "%'";
+                SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+                SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                ManufacturerDGV.DataSource = dt;
+                Con.Close();         
+
         }
 
         private void DeleteBtn_Click_1(object sender, EventArgs e)
         {
-            if (Key == 0)
+            if(Permission == "Admin")
             {
-                MessageBox.Show("Chọn một dòng để xóa !");
+                if (Key == 0)
+                {
+                    MessageBox.Show("Chọn một dòng để xóa !");
+                }
+                else
+                {
+                    try
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("Delete from ManufacturerTbl where ManId = @MKey", Con);
+                        cmd.Parameters.AddWithValue("@MKey", Key);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đã xóa");
+                        Con.Close();
+
+                        Reset();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
             else
             {
-                try
-                {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("Delete from ManufacturerTbl where ManId = @MKey", Con);
-                    cmd.Parameters.AddWithValue("@MKey", Key);
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đã xóa");
-                    Con.Close();
-                    ShowManufacturer();
-                    Reset();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Bạn không có quyền này !");
             }
         }
 
@@ -202,6 +249,52 @@ namespace QuanLyDuoc
         private void guna2PictureBox2_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void FindTb_TextChanged(object sender, EventArgs e)
+        {
+            Find();
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            ShowManufacturer();
+        }
+
+        private void ManNameTb_TextChanged(object sender, EventArgs e)
+        {
+            if (ManNameTb.Text == "")
+            {
+                SaveBtn.Enabled = false;
+                EditBtn.Enabled = false;
+                DeleteBtn.Enabled = false;
+                guna2GradientButton2.Enabled = false;
+            }
+            else
+            {
+                SaveBtn.Enabled = true;
+                EditBtn.Enabled = true;
+                DeleteBtn.Enabled = true;
+                guna2GradientButton2.Enabled = true;
+            }
+        }
+
+        private void Manufacturer_Load(object sender, EventArgs e)
+        {
+            SaveBtn.Enabled = false;
+            EditBtn.Enabled = false;
+            DeleteBtn.Enabled = false;
+            guna2GradientButton2.Enabled = false;
+        }
+
+        private void EditBtn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

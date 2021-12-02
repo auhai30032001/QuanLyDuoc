@@ -155,6 +155,7 @@ namespace QuanLyDuoc
             this.guna2PictureBox8 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox37 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox36 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label37 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox13)).BeginInit();
@@ -611,6 +612,7 @@ namespace QuanLyDuoc
             // guna2Panel13
             // 
             this.guna2Panel13.BackColor = System.Drawing.Color.White;
+            this.guna2Panel13.Controls.Add(this.label37);
             this.guna2Panel13.Controls.Add(this.guna2CustomGradientPanel17);
             this.guna2Panel13.Controls.Add(this.guna2CustomGradientPanel18);
             this.guna2Panel13.Controls.Add(this.guna2CustomGradientPanel19);
@@ -1686,6 +1688,16 @@ namespace QuanLyDuoc
             this.guna2PictureBox36.TabStop = false;
             this.guna2PictureBox36.Click += new System.EventHandler(this.guna2PictureBox36_Click);
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(196, 745);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(89, 24);
+            this.label37.TabIndex = 49;
+            this.label37.Text = "Đăng xuất";
+            // 
             // Dashboar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1941,5 +1953,6 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox35;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox34;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label37;
     }
 }

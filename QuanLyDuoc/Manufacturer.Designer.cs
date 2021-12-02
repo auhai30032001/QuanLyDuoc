@@ -30,13 +30,15 @@ namespace QuanLyDuoc
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.FindTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.ManJDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,6 +61,7 @@ namespace QuanLyDuoc
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel17 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2PictureBox29 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -78,6 +81,7 @@ namespace QuanLyDuoc
             this.guna2PictureBox34 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ManufacturerDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -119,6 +123,9 @@ namespace QuanLyDuoc
             // guna2Panel6
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.White;
+            this.guna2Panel6.Controls.Add(this.guna2GradientButton2);
+            this.guna2Panel6.Controls.Add(this.guna2GradientButton1);
+            this.guna2Panel6.Controls.Add(this.FindTb);
             this.guna2Panel6.Controls.Add(this.ManJDate);
             this.guna2Panel6.Controls.Add(this.label6);
             this.guna2Panel6.Controls.Add(this.label10);
@@ -138,6 +145,57 @@ namespace QuanLyDuoc
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
             this.guna2Panel6.Size = new System.Drawing.Size(1127, 671);
             this.guna2Panel6.TabIndex = 42;
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.BorderRadius = 20;
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.DisabledState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.Blue;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Blue;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(34, 234);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(162, 49);
+            this.guna2GradientButton1.TabIndex = 42;
+            this.guna2GradientButton1.Text = "Xem";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            // 
+            // FindTb
+            // 
+            this.FindTb.Animated = true;
+            this.FindTb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.FindTb.BorderRadius = 15;
+            this.FindTb.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.FindTb.DefaultText = "";
+            this.FindTb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.FindTb.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.FindTb.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FindTb.DisabledState.Parent = this.FindTb;
+            this.FindTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FindTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FindTb.FocusedState.Parent = this.FindTb;
+            this.FindTb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.FindTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FindTb.HoverState.Parent = this.FindTb;
+            this.FindTb.Location = new System.Drawing.Point(793, 239);
+            this.FindTb.Name = "FindTb";
+            this.FindTb.PasswordChar = '\0';
+            this.FindTb.PlaceholderText = "Nhập tên cần tìm...";
+            this.FindTb.SelectedText = "";
+            this.FindTb.ShadowDecoration.Parent = this.FindTb;
+            this.FindTb.Size = new System.Drawing.Size(318, 39);
+            this.FindTb.TabIndex = 41;
+            this.FindTb.TextChanged += new System.EventHandler(this.FindTb_TextChanged);
             // 
             // ManJDate
             // 
@@ -178,30 +236,30 @@ namespace QuanLyDuoc
             // 
             // ManufacturerDGV
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            this.ManufacturerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.ManufacturerDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.ManufacturerDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ManufacturerDGV.BackgroundColor = System.Drawing.Color.White;
             this.ManufacturerDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ManufacturerDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.ManufacturerDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ManufacturerDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ManufacturerDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.ManufacturerDGV.ColumnHeadersHeight = 26;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ManufacturerDGV.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ManufacturerDGV.DefaultCellStyle = dataGridViewCellStyle15;
             this.ManufacturerDGV.EnableHeadersVisualStyles = false;
             this.ManufacturerDGV.GridColor = System.Drawing.Color.DarkGray;
             this.ManufacturerDGV.Location = new System.Drawing.Point(21, 307);
@@ -249,7 +307,7 @@ namespace QuanLyDuoc
             this.DeleteBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
             this.DeleteBtn.HoverState.Parent = this.DeleteBtn;
-            this.DeleteBtn.Location = new System.Drawing.Point(685, 176);
+            this.DeleteBtn.Location = new System.Drawing.Point(577, 163);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.ShadowDecoration.Parent = this.DeleteBtn;
             this.DeleteBtn.Size = new System.Drawing.Size(109, 57);
@@ -271,12 +329,13 @@ namespace QuanLyDuoc
             this.EditBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.EditBtn.ForeColor = System.Drawing.Color.White;
             this.EditBtn.HoverState.Parent = this.EditBtn;
-            this.EditBtn.Location = new System.Drawing.Point(523, 176);
+            this.EditBtn.Location = new System.Drawing.Point(415, 163);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.ShadowDecoration.Parent = this.EditBtn;
             this.EditBtn.Size = new System.Drawing.Size(109, 57);
             this.EditBtn.TabIndex = 28;
             this.EditBtn.Text = "Sửa";
+            this.EditBtn.TextChanged += new System.EventHandler(this.EditBtn_TextChanged);
             this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click_1);
             // 
             // SaveBtn
@@ -293,7 +352,7 @@ namespace QuanLyDuoc
             this.SaveBtn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.ForeColor = System.Drawing.Color.White;
             this.SaveBtn.HoverState.Parent = this.SaveBtn;
-            this.SaveBtn.Location = new System.Drawing.Point(353, 176);
+            this.SaveBtn.Location = new System.Drawing.Point(245, 163);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.ShadowDecoration.Parent = this.SaveBtn;
             this.SaveBtn.Size = new System.Drawing.Size(109, 57);
@@ -315,14 +374,14 @@ namespace QuanLyDuoc
             this.ManPhoneTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ManPhoneTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ManPhoneTb.FocusedState.Parent = this.ManPhoneTb;
-            this.ManPhoneTb.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManPhoneTb.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.ManPhoneTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ManPhoneTb.HoverState.Parent = this.ManPhoneTb;
             this.ManPhoneTb.Location = new System.Drawing.Point(556, 108);
             this.ManPhoneTb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ManPhoneTb.Name = "ManPhoneTb";
             this.ManPhoneTb.PasswordChar = '\0';
-            this.ManPhoneTb.PlaceholderText = "";
+            this.ManPhoneTb.PlaceholderText = "Số điện thoại...";
             this.ManPhoneTb.SelectedText = "";
             this.ManPhoneTb.ShadowDecoration.Parent = this.ManPhoneTb;
             this.ManPhoneTb.Size = new System.Drawing.Size(213, 39);
@@ -352,14 +411,14 @@ namespace QuanLyDuoc
             this.ManAddTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ManAddTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ManAddTb.FocusedState.Parent = this.ManAddTb;
-            this.ManAddTb.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManAddTb.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.ManAddTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ManAddTb.HoverState.Parent = this.ManAddTb;
             this.ManAddTb.Location = new System.Drawing.Point(268, 108);
             this.ManAddTb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ManAddTb.Name = "ManAddTb";
             this.ManAddTb.PasswordChar = '\0';
-            this.ManAddTb.PlaceholderText = "";
+            this.ManAddTb.PlaceholderText = "Địa chỉ sản xuất...";
             this.ManAddTb.SelectedText = "";
             this.ManAddTb.ShadowDecoration.Parent = this.ManAddTb;
             this.ManAddTb.Size = new System.Drawing.Size(256, 39);
@@ -389,18 +448,19 @@ namespace QuanLyDuoc
             this.ManNameTb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ManNameTb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ManNameTb.FocusedState.Parent = this.ManNameTb;
-            this.ManNameTb.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManNameTb.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.ManNameTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ManNameTb.HoverState.Parent = this.ManNameTb;
             this.ManNameTb.Location = new System.Drawing.Point(21, 108);
             this.ManNameTb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ManNameTb.Name = "ManNameTb";
             this.ManNameTb.PasswordChar = '\0';
-            this.ManNameTb.PlaceholderText = "";
+            this.ManNameTb.PlaceholderText = "Tên nhà sản xuất...";
             this.ManNameTb.SelectedText = "";
             this.ManNameTb.ShadowDecoration.Parent = this.ManNameTb;
             this.ManNameTb.Size = new System.Drawing.Size(213, 39);
             this.ManNameTb.TabIndex = 15;
+            this.ManNameTb.TextChanged += new System.EventHandler(this.ManNameTb_TextChanged);
             // 
             // label3
             // 
@@ -470,6 +530,7 @@ namespace QuanLyDuoc
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.guna2CustomGradientPanel17);
             this.guna2Panel1.Controls.Add(this.guna2CustomGradientPanel18);
             this.guna2Panel1.Controls.Add(this.guna2CustomGradientPanel19);
@@ -484,6 +545,16 @@ namespace QuanLyDuoc
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(313, 821);
             this.guna2Panel1.TabIndex = 41;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(169, 754);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 24);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Đăng xuất";
             // 
             // guna2CustomGradientPanel17
             // 
@@ -686,7 +757,7 @@ namespace QuanLyDuoc
             // 
             this.guna2PictureBox34.Image = global::QuanLyDuoc.Properties.Resources._1053210;
             this.guna2PictureBox34.ImageRotate = 0F;
-            this.guna2PictureBox34.Location = new System.Drawing.Point(92, 721);
+            this.guna2PictureBox34.Location = new System.Drawing.Point(51, 725);
             this.guna2PictureBox34.Name = "guna2PictureBox34";
             this.guna2PictureBox34.ShadowDecoration.Parent = this.guna2PictureBox34;
             this.guna2PictureBox34.Size = new System.Drawing.Size(117, 75);
@@ -711,6 +782,28 @@ namespace QuanLyDuoc
             this.guna2Elipse8.BorderRadius = 30;
             this.guna2Elipse8.TargetControl = this;
             // 
+            // guna2GradientButton2
+            // 
+            this.guna2GradientButton2.BorderRadius = 20;
+            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton2.DisabledState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Location = new System.Drawing.Point(720, 163);
+            this.guna2GradientButton2.Name = "guna2GradientButton2";
+            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Size = new System.Drawing.Size(109, 57);
+            this.guna2GradientButton2.TabIndex = 43;
+            this.guna2GradientButton2.Text = "Làm mới";
+            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
+            // 
             // Manufacturer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -726,6 +819,7 @@ namespace QuanLyDuoc
             this.Name = "Manufacturer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manufacturer";
+            this.Load += new System.EventHandler(this.Manufacturer_Load);
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ManufacturerDGV)).EndInit();
@@ -801,5 +895,9 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox35;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox34;
         private System.Windows.Forms.Label label35;
+        private Guna.UI2.WinForms.Guna2TextBox FindTb;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
     }
 }

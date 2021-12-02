@@ -43,6 +43,8 @@ namespace QuanLyDuoc
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PerCb = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -50,6 +52,7 @@ namespace QuanLyDuoc
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label35
@@ -57,7 +60,7 @@ namespace QuanLyDuoc
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("MV Boli", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Lime;
-            this.label35.Location = new System.Drawing.Point(140, 200);
+            this.label35.Location = new System.Drawing.Point(140, 168);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(232, 65);
             this.label35.TabIndex = 43;
@@ -139,7 +142,7 @@ namespace QuanLyDuoc
             this.LoginBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.LoginBtn.ForeColor = System.Drawing.Color.Yellow;
             this.LoginBtn.HoverState.Parent = this.LoginBtn;
-            this.LoginBtn.Location = new System.Drawing.Point(174, 476);
+            this.LoginBtn.Location = new System.Drawing.Point(188, 528);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.ShadowDecoration.Parent = this.LoginBtn;
             this.LoginBtn.Size = new System.Drawing.Size(155, 45);
@@ -165,7 +168,7 @@ namespace QuanLyDuoc
             this.PasswordTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.PasswordTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.PasswordTb.HoverState.Parent = this.PasswordTb;
-            this.PasswordTb.Location = new System.Drawing.Point(120, 386);
+            this.PasswordTb.Location = new System.Drawing.Point(120, 354);
             this.PasswordTb.Name = "PasswordTb";
             this.PasswordTb.PasswordChar = '\0';
             this.PasswordTb.PlaceholderText = "Password...";
@@ -173,6 +176,7 @@ namespace QuanLyDuoc
             this.PasswordTb.ShadowDecoration.Parent = this.PasswordTb;
             this.PasswordTb.Size = new System.Drawing.Size(303, 49);
             this.PasswordTb.TabIndex = 47;
+            this.PasswordTb.UseSystemPasswordChar = true;
             // 
             // Acount
             // 
@@ -192,7 +196,7 @@ namespace QuanLyDuoc
             this.Acount.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Acount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Acount.HoverState.Parent = this.Acount;
-            this.Acount.Location = new System.Drawing.Point(120, 295);
+            this.Acount.Location = new System.Drawing.Point(120, 263);
             this.Acount.Name = "Acount";
             this.Acount.PasswordChar = '\0';
             this.Acount.PlaceholderText = "Email...";
@@ -205,7 +209,7 @@ namespace QuanLyDuoc
             // 
             this.guna2CirclePictureBox2.Image = global::QuanLyDuoc.Properties.Resources.Pass;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(42, 363);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(42, 331);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.ShadowDecoration.Parent = this.guna2CirclePictureBox2;
@@ -218,7 +222,7 @@ namespace QuanLyDuoc
             // 
             this.guna2CirclePictureBox1.Image = global::QuanLyDuoc.Properties.Resources.Acount;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(42, 279);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(42, 247);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
@@ -240,12 +244,54 @@ namespace QuanLyDuoc
             this.guna2PictureBox3.TabStop = false;
             this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
             // 
+            // PerCb
+            // 
+            this.PerCb.BackColor = System.Drawing.Color.Transparent;
+            this.PerCb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.PerCb.BorderRadius = 15;
+            this.PerCb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.PerCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PerCb.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.PerCb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PerCb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PerCb.FocusedState.Parent = this.PerCb;
+            this.PerCb.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.PerCb.ForeColor = System.Drawing.Color.White;
+            this.PerCb.HoverState.Parent = this.PerCb;
+            this.PerCb.ItemHeight = 30;
+            this.PerCb.Items.AddRange(new object[] {
+            "Admin",
+            "Thu Ngân",
+            "Quản Kho"});
+            this.PerCb.ItemsAppearance.Parent = this.PerCb;
+            this.PerCb.Location = new System.Drawing.Point(120, 437);
+            this.PerCb.Name = "PerCb";
+            this.PerCb.ShadowDecoration.Parent = this.PerCb;
+            this.PerCb.Size = new System.Drawing.Size(303, 36);
+            this.PerCb.TabIndex = 50;
+            this.PerCb.SelectedIndexChanged += new System.EventHandler(this.SGenCb_SelectedIndexChanged);
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.Image = global::QuanLyDuoc.Properties.Resources.Pass;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(42, 418);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.ShadowDecoration.Parent = this.guna2CirclePictureBox3;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(61, 72);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox3.TabIndex = 51;
+            this.guna2CirclePictureBox3.TabStop = false;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(503, 690);
+            this.Controls.Add(this.guna2CirclePictureBox3);
+            this.Controls.Add(this.PerCb);
             this.Controls.Add(this.guna2PictureBox3);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.guna2Panel1);
@@ -265,6 +311,7 @@ namespace QuanLyDuoc
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +332,7 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox Acount;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox PerCb;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
     }
 }

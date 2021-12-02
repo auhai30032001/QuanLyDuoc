@@ -42,8 +42,8 @@ namespace QuanLyDuoc
             this.UNameTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -174,6 +174,7 @@ namespace QuanLyDuoc
             this.PassTb.ShadowDecoration.Parent = this.PassTb;
             this.PassTb.Size = new System.Drawing.Size(316, 49);
             this.PassTb.TabIndex = 40;
+            this.PassTb.UseSystemPasswordChar = true;
             // 
             // UNameTb
             // 
@@ -228,30 +229,6 @@ namespace QuanLyDuoc
             this.guna2CirclePictureBox1.TabIndex = 39;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderColor = System.Drawing.Color.Fuchsia;
-            this.guna2Button1.BorderRadius = 15;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.Yellow;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(280, 490);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(155, 45);
-            this.guna2Button1.TabIndex = 43;
-            this.guna2Button1.Text = "Đăng ký";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -264,14 +241,38 @@ namespace QuanLyDuoc
             this.label1.Text = "Bạn muốn đổi mật khẩu?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.Cyan;
+            this.guna2Button1.BorderRadius = 15;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.Cyan;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(280, 490);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(155, 45);
+            this.guna2Button1.TabIndex = 45;
+            this.guna2Button1.Text = "Đăng nhập";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(503, 690);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.LoginBtn);
@@ -308,7 +309,7 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox UNameTb;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

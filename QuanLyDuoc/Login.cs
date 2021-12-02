@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace QuanLyDuoc
 {
+    //Form
     public partial class Login : Form
     {
         public Login()
@@ -46,7 +47,7 @@ namespace QuanLyDuoc
 
        
 
-        private void LoginBtn_Click_1(object sender, EventArgs e)
+        public void LoginBtn_Click_1(object sender, EventArgs e)
         {
             if (UNameTb.Text == "" || PassTb.Text == "")
             {
@@ -55,15 +56,20 @@ namespace QuanLyDuoc
             else
             {
                 Con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Acount where Email='" + UNameTb.Text + "' and Password='" + PassTb.Text + "'", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from Acount where Email= N'" + UNameTb.Text + "' and Password='" + PassTb.Text + "'", Con);
                 DataTable dt = new DataTable();
-                sda.Fill(dt);
-                if (dt.Rows[0][0].ToString() == "1")
-                {
+                sda.Fill(dt);            
+               if(dt.Rows.Count > 0)
+                {              
+                    
                     User = UNameTb.Text;
-                    Dashboar obj = new Dashboar();
+                    Customer obj = new Customer(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString());             
+                    //Dashboar obj = new Dashboar();
                     obj.Show();
                     this.Hide();
+                   
+                   // MessageBox.Show( dt.Rows[0][3].ToString());
+
                     Con.Close();
                 }
                 else
@@ -72,6 +78,8 @@ namespace QuanLyDuoc
                 }
                 Con.Close();
             }
+
+            
         }
 
         private void guna2PictureBox2_Click_1(object sender, EventArgs e)
@@ -96,6 +104,13 @@ namespace QuanLyDuoc
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            SignUp obj = new SignUp();
+            obj.Show();
+            this.Hide();
         }
     }
 }

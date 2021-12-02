@@ -215,11 +215,49 @@ namespace QuanLyDuoc
             Application.Exit();
         }
 
+        private void FindTb_TextChanged(object sender, EventArgs e)
+        {
+            Find();
+        }
+
+        private void MedQtyTb_TextChanged(object sender, EventArgs e)
+        {
+            if(MedQtyTb.Text == "")
+            {
+                guna2GradientButton1.Enabled = false;
+                AddBillBtn.Enabled = false;
+            }
+            else
+            {
+                guna2GradientButton1.Enabled = true;
+                AddBillBtn.Enabled = true;
+            }
+        }
+
+        private void Transacion_Load(object sender, EventArgs e)
+        {
+            CustIDCb.SelectedIndex = 0;
+            guna2GradientButton1.Enabled = false;
+            AddBillBtn.Enabled = false;
+        }
+
+        private void Find()
+        {
+            Con.Open();
+            string Query = "Select * from MedicineTbl where MedName like '%" + FindTb.Text.Trim() + "%'";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            MedicinesDGV.DataSource = dt;
+            Con.Close();
+        }
+
         private void AddBillBtn_Click(object sender, EventArgs e)
         {
             if (MedQtyTb.Text == "" || Convert.ToInt32(MedQtyTb.Text) > Stock)
             {
-                MessageBox.Show("Nhập đúng số lượng !");
+                MessageBox.Show("Vui lòng nhập lại số lượng !");
             }
             else
             {

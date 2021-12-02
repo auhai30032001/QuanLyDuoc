@@ -16,7 +16,7 @@ namespace QuanLyDuoc
         public RePass()
         {
             InitializeComponent();
-            ShowAcount();
+           // ShowAcount();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=.\MSSQL_EXP_2008R2;Initial Catalog=HealthCare;Integrated Security=True");
 
@@ -111,26 +111,13 @@ namespace QuanLyDuoc
                 Key = Convert.ToInt32(AcountDGV.Rows[e.RowIndex].Cells[0].Value.ToString());
             }
         }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            ShowAcount();
+        }
     }
 }
 
 
 
-/*
-Con.Open();
-SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Acount where Email='" + UNameTb.Text + "' and Password='" + PassTb.Text + "'", Con);
-DataTable dt = new DataTable();
-sda.Fill(dt);
-if (dt.Rows[0][0].ToString() == "1")
-{
-    User = UNameTb.Text;
-    Dashboar obj = new Dashboar();
-    obj.Show();
-    this.Hide();
-    Con.Close();
-}
-else
-{
-    MessageBox.Show("Sai tài khoản hoặc mật khẩu !");
-}
-Con.Close();*/

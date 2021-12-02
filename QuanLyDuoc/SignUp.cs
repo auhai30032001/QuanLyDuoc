@@ -51,9 +51,10 @@ namespace QuanLyDuoc
                 try
                 {
                     Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into Acount(Email,Password)values(@EM,@PW)", Con);
+                    SqlCommand cmd = new SqlCommand("insert into Acount(Email,Password,Permission)values(@EM,@PW,@PE)", Con);
                     cmd.Parameters.AddWithValue("@EM", Acount.Text);
                     cmd.Parameters.AddWithValue("@PW", PasswordTb.Text);
+                    cmd.Parameters.AddWithValue("@PE", PerCb.SelectedItem.ToString());
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đăng kí thành công ");
                     Con.Close();
@@ -64,6 +65,11 @@ namespace QuanLyDuoc
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void SGenCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

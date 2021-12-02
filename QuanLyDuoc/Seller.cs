@@ -16,7 +16,7 @@ namespace QuanLyDuoc
         public Seller()
         {
             InitializeComponent();
-            ShowSeller();
+            //ShowSeller();
         }
 
         SqlConnection Con = new SqlConnection(@"Data Source=.\MSSQL_EXP_2008R2;Initial Catalog=HealthCare;Integrated Security=True");
@@ -25,6 +25,18 @@ namespace QuanLyDuoc
         {
             Con.Open();
             string Query = "Select * from SellerTbl";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            SellDGV.DataSource = dt;
+            Con.Close();
+        }
+
+        private void Find()
+        {
+            Con.Open();
+            string Query = "Select * from SellerTbl where SName like '%" + FindTb.Text + "%'";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
             DataTable dt = new DataTable();
@@ -86,7 +98,7 @@ namespace QuanLyDuoc
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã lưu ");
                     Con.Close();
-                    ShowSeller();
+                  
                     Reset();
                 }
                 catch (Exception ex)
@@ -100,7 +112,7 @@ namespace QuanLyDuoc
         {
             if (SNameTb.Text == "" || SPhoneTb.Text == "" || SAddTb.Text == ""  || SGenCb.SelectedIndex == -1)
             {
-                MessageBox.Show("Chọn một dòng để sửa!");
+                MessageBox.Show("Thiếu thông tin !");
             }
             else
             {
@@ -118,7 +130,7 @@ namespace QuanLyDuoc
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã sửa ");
                     Con.Close();
-                    ShowSeller();
+                   
                     Reset();
                 }
                 catch (Exception ex)
@@ -144,7 +156,7 @@ namespace QuanLyDuoc
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Đã xóa ");
                     Con.Close();
-                    ShowSeller();
+                   
                     Reset();
                 }
                 catch (Exception ex)
@@ -219,6 +231,48 @@ namespace QuanLyDuoc
         private void guna2PictureBox1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void FindTb_TextChanged(object sender, EventArgs e)
+        {
+            Find();
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            ShowSeller();
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void SNameTb_TextChanged(object sender, EventArgs e)
+        {
+            if(SNameTb.Text == "")
+            {
+                SaveBtn.Enabled = false;
+                EditBtn.Enabled = false;
+                DeleteBtn.Enabled = false;
+                guna2GradientButton2.Enabled = false;
+            }
+            else
+            {
+                SaveBtn.Enabled = true;
+                EditBtn.Enabled = true;
+                DeleteBtn.Enabled = true;
+                guna2GradientButton2.Enabled = true;
+            }
+        }
+
+        private void Seller_Load(object sender, EventArgs e)
+        {
+            SGenCb.SelectedIndex = 0;
+            SaveBtn.Enabled = false;
+            EditBtn.Enabled = false;
+            DeleteBtn.Enabled = false;
+            guna2GradientButton2.Enabled = false;
         }
     }
 }
