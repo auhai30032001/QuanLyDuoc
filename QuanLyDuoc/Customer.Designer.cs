@@ -30,10 +30,11 @@ namespace QuanLyDuoc
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.FindTb = new Guna.UI2.WinForms.Guna2TextBox();
             this.CusDOB = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -57,20 +58,20 @@ namespace QuanLyDuoc
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel17 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label13 = new System.Windows.Forms.Label();
             this.guna2PictureBox29 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel18 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2PictureBox30 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel19 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label9 = new System.Windows.Forms.Label();
             this.guna2PictureBox31 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel20 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox32 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel21 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2PictureBox33 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label34 = new System.Windows.Forms.Label();
+            this.guna2PictureBox33 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox35 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox34 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -82,7 +83,6 @@ namespace QuanLyDuoc
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustDGV)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -128,6 +128,28 @@ namespace QuanLyDuoc
             this.guna2Panel6.ShadowDecoration.Parent = this.guna2Panel6;
             this.guna2Panel6.Size = new System.Drawing.Size(1145, 671);
             this.guna2Panel6.TabIndex = 29;
+            // 
+            // guna2GradientButton2
+            // 
+            this.guna2GradientButton2.BorderRadius = 20;
+            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton2.DisabledState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Location = new System.Drawing.Point(986, 189);
+            this.guna2GradientButton2.Name = "guna2GradientButton2";
+            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
+            this.guna2GradientButton2.Size = new System.Drawing.Size(109, 57);
+            this.guna2GradientButton2.TabIndex = 44;
+            this.guna2GradientButton2.Text = "Làm mới";
+            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
             // 
             // guna2GradientButton1
             // 
@@ -254,30 +276,30 @@ namespace QuanLyDuoc
             // 
             // CustDGV
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.CustDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.CustDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.CustDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.CustDGV.BackgroundColor = System.Drawing.Color.White;
             this.CustDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CustDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.CustDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CustDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CustDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.CustDGV.ColumnHeadersHeight = 26;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.CustDGV.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CustDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.CustDGV.EnableHeadersVisualStyles = false;
             this.CustDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.CustDGV.Location = new System.Drawing.Point(21, 307);
@@ -542,14 +564,24 @@ namespace QuanLyDuoc
             this.guna2CustomGradientPanel17.BackColor = System.Drawing.Color.White;
             this.guna2CustomGradientPanel17.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel17.BorderThickness = 2;
+            this.guna2CustomGradientPanel17.Controls.Add(this.label13);
             this.guna2CustomGradientPanel17.Controls.Add(this.guna2PictureBox29);
-            this.guna2CustomGradientPanel17.Controls.Add(this.label30);
             this.guna2CustomGradientPanel17.Location = new System.Drawing.Point(-18, 590);
             this.guna2CustomGradientPanel17.Name = "guna2CustomGradientPanel17";
             this.guna2CustomGradientPanel17.ShadowDecoration.Parent = this.guna2CustomGradientPanel17;
             this.guna2CustomGradientPanel17.Size = new System.Drawing.Size(353, 96);
             this.guna2CustomGradientPanel17.TabIndex = 35;
             this.guna2CustomGradientPanel17.Click += new System.EventHandler(this.guna2CustomGradientPanel17_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(129, 34);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(162, 29);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Nhà sản xuất";
             // 
             // guna2PictureBox29
             // 
@@ -563,29 +595,29 @@ namespace QuanLyDuoc
             this.guna2PictureBox29.TabIndex = 20;
             this.guna2PictureBox29.TabStop = false;
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(128, 29);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(173, 35);
-            this.label30.TabIndex = 19;
-            this.label30.Text = "Nhà cung cấp";
-            // 
             // guna2CustomGradientPanel18
             // 
             this.guna2CustomGradientPanel18.BackColor = System.Drawing.Color.White;
             this.guna2CustomGradientPanel18.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel18.BorderThickness = 2;
+            this.guna2CustomGradientPanel18.Controls.Add(this.label11);
             this.guna2CustomGradientPanel18.Controls.Add(this.guna2PictureBox30);
-            this.guna2CustomGradientPanel18.Controls.Add(this.label31);
             this.guna2CustomGradientPanel18.Location = new System.Drawing.Point(-12, 487);
             this.guna2CustomGradientPanel18.Name = "guna2CustomGradientPanel18";
             this.guna2CustomGradientPanel18.ShadowDecoration.Parent = this.guna2CustomGradientPanel18;
             this.guna2CustomGradientPanel18.Size = new System.Drawing.Size(331, 96);
             this.guna2CustomGradientPanel18.TabIndex = 36;
             this.guna2CustomGradientPanel18.Click += new System.EventHandler(this.guna2CustomGradientPanel18_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(123, 34);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(128, 29);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Nhân viên";
             // 
             // guna2PictureBox30
             // 
@@ -599,23 +631,13 @@ namespace QuanLyDuoc
             this.guna2PictureBox30.TabIndex = 20;
             this.guna2PictureBox30.TabStop = false;
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(122, 29);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(130, 35);
-            this.label31.TabIndex = 19;
-            this.label31.Text = "Nhân viên";
-            // 
             // guna2CustomGradientPanel19
             // 
             this.guna2CustomGradientPanel19.BackColor = System.Drawing.Color.Silver;
             this.guna2CustomGradientPanel19.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel19.BorderThickness = 2;
+            this.guna2CustomGradientPanel19.Controls.Add(this.label9);
             this.guna2CustomGradientPanel19.Controls.Add(this.guna2PictureBox31);
-            this.guna2CustomGradientPanel19.Controls.Add(this.label32);
             this.guna2CustomGradientPanel19.FillColor = System.Drawing.Color.Silver;
             this.guna2CustomGradientPanel19.FillColor2 = System.Drawing.Color.Silver;
             this.guna2CustomGradientPanel19.FillColor3 = System.Drawing.Color.Silver;
@@ -625,6 +647,16 @@ namespace QuanLyDuoc
             this.guna2CustomGradientPanel19.ShadowDecoration.Parent = this.guna2CustomGradientPanel19;
             this.guna2CustomGradientPanel19.Size = new System.Drawing.Size(347, 96);
             this.guna2CustomGradientPanel19.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(123, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(151, 29);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Khách hàng";
             // 
             // guna2PictureBox31
             // 
@@ -638,29 +670,29 @@ namespace QuanLyDuoc
             this.guna2PictureBox31.TabIndex = 20;
             this.guna2PictureBox31.TabStop = false;
             // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(122, 29);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(146, 35);
-            this.label32.TabIndex = 19;
-            this.label32.Text = "Khách hàng";
-            // 
             // guna2CustomGradientPanel20
             // 
             this.guna2CustomGradientPanel20.BackColor = System.Drawing.Color.White;
             this.guna2CustomGradientPanel20.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel20.BorderThickness = 2;
+            this.guna2CustomGradientPanel20.Controls.Add(this.label1);
             this.guna2CustomGradientPanel20.Controls.Add(this.guna2PictureBox32);
-            this.guna2CustomGradientPanel20.Controls.Add(this.label33);
             this.guna2CustomGradientPanel20.Location = new System.Drawing.Point(-12, 283);
             this.guna2CustomGradientPanel20.Name = "guna2CustomGradientPanel20";
             this.guna2CustomGradientPanel20.ShadowDecoration.Parent = this.guna2CustomGradientPanel20;
             this.guna2CustomGradientPanel20.Size = new System.Drawing.Size(347, 96);
             this.guna2CustomGradientPanel20.TabIndex = 37;
             this.guna2CustomGradientPanel20.Click += new System.EventHandler(this.guna2CustomGradientPanel20_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(123, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 29);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Kho dược";
             // 
             // guna2PictureBox32
             // 
@@ -674,29 +706,29 @@ namespace QuanLyDuoc
             this.guna2PictureBox32.TabIndex = 20;
             this.guna2PictureBox32.TabStop = false;
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(122, 29);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(128, 35);
-            this.label33.TabIndex = 19;
-            this.label33.Text = "Kho Dược";
-            // 
             // guna2CustomGradientPanel21
             // 
             this.guna2CustomGradientPanel21.BackColor = System.Drawing.Color.White;
             this.guna2CustomGradientPanel21.BorderColor = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel21.BorderThickness = 2;
-            this.guna2CustomGradientPanel21.Controls.Add(this.guna2PictureBox33);
             this.guna2CustomGradientPanel21.Controls.Add(this.label34);
+            this.guna2CustomGradientPanel21.Controls.Add(this.guna2PictureBox33);
             this.guna2CustomGradientPanel21.Location = new System.Drawing.Point(-12, 181);
             this.guna2CustomGradientPanel21.Name = "guna2CustomGradientPanel21";
             this.guna2CustomGradientPanel21.ShadowDecoration.Parent = this.guna2CustomGradientPanel21;
             this.guna2CustomGradientPanel21.Size = new System.Drawing.Size(347, 96);
             this.guna2CustomGradientPanel21.TabIndex = 34;
             this.guna2CustomGradientPanel21.Click += new System.EventHandler(this.guna2CustomGradientPanel21_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(123, 34);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(101, 29);
+            this.label34.TabIndex = 21;
+            this.label34.Text = "Quản lý";
             // 
             // guna2PictureBox33
             // 
@@ -709,16 +741,6 @@ namespace QuanLyDuoc
             this.guna2PictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox33.TabIndex = 20;
             this.guna2PictureBox33.TabStop = false;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(122, 29);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(107, 35);
-            this.label34.TabIndex = 19;
-            this.label34.Text = "Quản lý";
             // 
             // guna2PictureBox35
             // 
@@ -804,33 +826,11 @@ namespace QuanLyDuoc
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
-            // guna2GradientButton2
-            // 
-            this.guna2GradientButton2.BorderRadius = 20;
-            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.DisabledState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(986, 189);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Size = new System.Drawing.Size(109, 57);
-            this.guna2GradientButton2.TabIndex = 44;
-            this.guna2GradientButton2.Text = "Làm mới";
-            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
-            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1472, 821);
             this.Controls.Add(this.guna2Panel6);
             this.Controls.Add(this.label12);
@@ -894,18 +894,13 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel17;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox29;
-        private System.Windows.Forms.Label label30;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel18;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox30;
-        private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel19;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox31;
-        private System.Windows.Forms.Label label32;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel20;
-        private System.Windows.Forms.Label label33;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel21;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox33;
-        private System.Windows.Forms.Label label34;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox35;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox34;
         private System.Windows.Forms.Label label35;
@@ -921,6 +916,11 @@ namespace QuanLyDuoc
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label34;
     }
 }
 

@@ -13,6 +13,7 @@ namespace QuanLyDuoc
 {
     public partial class Dashboar : Form
     {
+        string Permission = Login.info.Permission;
         public Dashboar()
         {
             InitializeComponent();
@@ -23,9 +24,12 @@ namespace QuanLyDuoc
             GetSeller();
             GetSBesteller();
             GetSBestCust();
+            LoginName.Text = Login.User;
+            
         }
         SqlConnection Con = new SqlConnection(@"Data Source=.\MSSQL_EXP_2008R2;Initial Catalog=HealthCare;Integrated Security=True");
 
+       
         private void CountMed()
         {
             Con.Open();
@@ -137,23 +141,44 @@ namespace QuanLyDuoc
        
         private void guna2CustomGradientPanel19_Click(object sender, EventArgs e)
         {
-            Customer obj = new Customer();
-            obj.Show();
-            this.Hide();
+            if(Permission == "Admin" || Permission == "Thu Ngân")
+            {
+                Customer obj = new Customer();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2CustomGradientPanel18_Click(object sender, EventArgs e)
         {
-            Seller obj = new Seller();
-            obj.Show();
-            this.Hide();
+            if (Permission == "Admin" )
+            {
+                Seller obj = new Seller();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2CustomGradientPanel17_Click(object sender, EventArgs e)
         {
-            Manufacturer obj = new Manufacturer();
-            obj.Show();
-            this.Hide();
+            if (Permission == "Admin" || Permission == "Quản Kho")
+            {
+                Manufacturer obj = new Manufacturer();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2PictureBox34_Click(object sender, EventArgs e)
@@ -171,9 +196,16 @@ namespace QuanLyDuoc
 
         private void guna2PictureBox36_Click(object sender, EventArgs e)
         {
-            Transacion obj = new Transacion();
-            obj.Show();
-            this.Hide();
+           if(Permission == "Admin" || Permission == "Thu Ngân")
+            {
+                Transacion obj = new Transacion();
+                obj.Show();
+                this.Hide();
+            }
+           else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void getSellcb_SelectionChangeCommitted_1(object sender, EventArgs e)
@@ -183,7 +215,34 @@ namespace QuanLyDuoc
 
         private void guna2CustomGradientPanel20_Click(object sender, EventArgs e)
         {
-            Medicne obj = new Medicne();
+            if (Permission == "Admin" || Permission == "Quản Kho")
+            {
+                Medicne obj = new Medicne();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
+        }
+
+        private void Dashboar_Load(object sender, EventArgs e)
+        {
+            getSellcb.Visible = false;
+            if (Permission == "Admin")
+            {
+                getSellcb.Visible = true;
+            }
+            else
+            {
+                getSellcb.Visible = false;
+            }
+        }
+
+        private void SNameLbl_Click(object sender, EventArgs e)
+        {
+            RePass obj = new RePass();
             obj.Show();
             this.Hide();
         }

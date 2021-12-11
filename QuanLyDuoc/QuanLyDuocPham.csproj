@@ -197,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HealthCare.sql" />
+    <None Include="Resources\One_User_Orange.png" />
     <None Include="Resources\images %281%29.jfif" />
     <None Include="Resources\images.jfif" />
     <None Include="Resources\icon-doanh-thu.png" />

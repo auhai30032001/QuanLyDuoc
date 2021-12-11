@@ -4,7 +4,6 @@ D:\BTL\QuanLyDuocPham\QuanLyDuoc\bin\Debug\QuanLyDuoc.pdb
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\bin\Debug\Guna.UI2.dll
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.Customer.resources
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.Dashboar.resources
-D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.Login.resources
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.Manufacturer.resources
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.Medicne.resources
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.Properties.Resources.resources
@@ -17,4 +16,5 @@ D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuocPham.csproj.CoreCompileInpu
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuocPham.csproj.CopyComplete
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.exe
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.pdb
+D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuoc.Info.resources
 D:\BTL\QuanLyDuocPham\QuanLyDuoc\obj\Debug\QuanLyDuocPham.csproj.AssemblyReference.cache

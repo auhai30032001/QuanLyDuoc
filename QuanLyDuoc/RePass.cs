@@ -13,27 +13,44 @@ namespace QuanLyDuoc
 {
     public partial class RePass : Form
     {
+        string Permission = Login.info.Permission;
         public RePass()
         {
             InitializeComponent();
-           // ShowAcount();
+          
+            LoginName.Text = Login.User;
+           
         }
         SqlConnection Con = new SqlConnection(@"Data Source=.\MSSQL_EXP_2008R2;Initial Catalog=HealthCare;Integrated Security=True");
 
-        private void ShowAcount()
+       
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       /* private void ShowAcount1()
         {
             Con.Open();
-            string Query = "Select IdAcount, Email from Acount";
+            string Query = "Select * from Acount where Email='"+LoginName.Text +"'";
             SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
             SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             AcountDGV.DataSource = dt;
             Con.Close();
-        }
-        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        }*/
+
+        private void ShowAcount2()
         {
-            Application.Exit();
+            Con.Open();
+            string Query = "Select SName,Password from SellerTbl  ";
+            SqlDataAdapter sda = new SqlDataAdapter(Query, Con);
+            SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            AcountDGV.DataSource = dt;
+            Con.Close();
         }
 
         private void Reset()
@@ -54,7 +71,7 @@ namespace QuanLyDuoc
 
        
 
-        bool a = true;
+   
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             if (RePassTb.Text == "" || REmailTb.Text == "" || ConfirmPassTb.Text == "")
@@ -65,16 +82,15 @@ namespace QuanLyDuoc
             else
             {              
                     Con.Open();
-                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Acount where Email='" + REmailTb.Text + "' and Password='" + RePassTb.Text + "'", Con);
+                    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from SellerTbl where SName= N'" + REmailTb.Text + "' and Password='" + RePassTb.Text + "'", Con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
-                    if (dt.Rows[0][0].ToString() == "1")
+                    if (dt.Rows.Count > 0)
                     {
                        
-                        SqlCommand cmd = new SqlCommand("Update Acount set Email = @EM, Password= @PA where IdAcount = @AKey", Con);
-                        cmd.Parameters.AddWithValue("@EM", REmailTb.Text);
-                        cmd.Parameters.AddWithValue("@PA", ConfirmPassTb.Text);
-                        cmd.Parameters.AddWithValue("@AKey", Key);
+                        SqlCommand cmd = new SqlCommand("Update SellerTbl set Password= @PA where SNum = ", Con);
+                        cmd.Parameters.AddWithValue("@PA", ConfirmPassTb.Text);                      
+                        
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Đã Sửa ");
                     Login obj = new Login();
@@ -94,27 +110,32 @@ namespace QuanLyDuoc
             }
         }
         int Key = 0;
-        private void AcountDGV_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.AcountDGV.Rows[e.RowIndex];
-                REmailTb.Text = AcountDGV.Rows[e.RowIndex].Cells[1].Value.ToString();
-                
-            }
-            if (REmailTb.Text == "")
-            {
-                Key = 0;
-            }
-            else
-            {
-                Key = Convert.ToInt32(AcountDGV.Rows[e.RowIndex].Cells[0].Value.ToString());
-            }
-        }
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            ShowAcount();
+
+        }
+
+        
+
+        
+
+        private void RePass_Load(object sender, EventArgs e)
+        {
+            LoginName.Visible = false;
+            REmailTb.Text = Login.User;
+           
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            if(Permission == "Admin")
+            {
+                ShowAcount2();
+            }else
+            {
+                MessageBox.Show("Bạn không thể xem !");
+            }
         }
     }
 }

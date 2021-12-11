@@ -13,6 +13,7 @@ namespace QuanLyDuoc
 {
     public partial class Medicne : Form
     {
+        string Permission = Login.info.Permission;
         public Medicne()
         {
             InitializeComponent();
@@ -100,91 +101,111 @@ namespace QuanLyDuoc
 
         private void SaveBtn_Click_1(object sender, EventArgs e)
         {
-            if (MedNameTb.Text == "" || MedPriceTb.Text == "" || MedQtyTb.Text == "" || MedTypeCb.SelectedIndex == -1 || MedManTb.Text == "")
+           if(Permission == "Admin" || Permission == "Quản Kho")
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin ");
+                if (MedNameTb.Text == "" || MedPriceTb.Text == "" || MedQtyTb.Text == "" || MedTypeCb.SelectedIndex == -1 || MedManTb.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập đủ thông tin ");
+                }
+                else
+                {
+                    try
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("insert into MedicineTbl(MedName,MedType,MedQty,MedPrice,MedManId,MedManufact)values(@MN,@MT,@MQ,@MP,@MMI,@MM)", Con);
+                        cmd.Parameters.AddWithValue("@MN", MedNameTb.Text);
+                        cmd.Parameters.AddWithValue("@MT", MedTypeCb.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@MQ", MedQtyTb.Text);
+                        cmd.Parameters.AddWithValue("@MP", MedPriceTb.Text);
+                        cmd.Parameters.AddWithValue("@MMI", MedManCb.SelectedValue.ToString()); ;
+                        cmd.Parameters.AddWithValue("@MM", MedManTb.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đã lưu");
+                        Con.Close();
+
+                        Reset();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
-            else
+           else
             {
-                try
-                {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into MedicineTbl(MedName,MedType,MedQty,MedPrice,MedManId,MedManufact)values(@MN,@MT,@MQ,@MP,@MMI,@MM)", Con);
-                    cmd.Parameters.AddWithValue("@MN", MedNameTb.Text);
-                    cmd.Parameters.AddWithValue("@MT", MedTypeCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@MQ", MedQtyTb.Text);
-                    cmd.Parameters.AddWithValue("@MP", MedPriceTb.Text);
-                    cmd.Parameters.AddWithValue("@MMI", MedManCb.SelectedValue.ToString()); ;
-                    cmd.Parameters.AddWithValue("@MM", MedManTb.Text);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đã lưu");
-                    Con.Close();
-                 
-                    Reset();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Bạn không có quyền này !");
             }
         }
 
         private void EditBtn_Click_1(object sender, EventArgs e)
         {
-            if (MedNameTb.Text == "" || MedPriceTb.Text == "" || MedQtyTb.Text == "" || MedTypeCb.SelectedIndex == -1 || MedManTb.Text == "")
+            if(Permission == "Admin" || Permission == "Quản Kho")
             {
-                MessageBox.Show("Thiếu thông tin ! ");
+                if (MedNameTb.Text == "" || MedPriceTb.Text == "" || MedQtyTb.Text == "" || MedTypeCb.SelectedIndex == -1 || MedManTb.Text == "")
+                {
+                    MessageBox.Show("Thiếu thông tin ! ");
+                }
+                else
+                {
+                    try
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("Update MedicineTbl set MedName = @MN ,MedType = @MT ,MedQty = @MQ ,MedPrice =  @MP ,MedManId =@MMI ,MedManufact = @MM where MedNum = @MKey", Con);
+                        cmd.Parameters.AddWithValue("@MN", MedNameTb.Text);
+                        cmd.Parameters.AddWithValue("@MT", MedTypeCb.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@MQ", MedQtyTb.Text);
+                        cmd.Parameters.AddWithValue("@MP", MedPriceTb.Text);
+                        cmd.Parameters.AddWithValue("@MMI", MedManCb.SelectedValue.ToString()); ;
+                        cmd.Parameters.AddWithValue("@MM", MedManTb.Text);
+                        cmd.Parameters.AddWithValue("@MKey", Key);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đã lưu");
+                        Con.Close();
+                        Reset();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
             else
             {
-                try
-                {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("Update MedicineTbl set MedName = @MN ,MedType = @MT ,MedQty = @MQ ,MedPrice =  @MP ,MedManId =@MMI ,MedManufact = @MM where MedNum = @MKey", Con);
-                    cmd.Parameters.AddWithValue("@MN", MedNameTb.Text);
-                    cmd.Parameters.AddWithValue("@MT", MedTypeCb.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@MQ", MedQtyTb.Text);
-                    cmd.Parameters.AddWithValue("@MP", MedPriceTb.Text);
-                    cmd.Parameters.AddWithValue("@MMI", MedManCb.SelectedValue.ToString()); ;
-                    cmd.Parameters.AddWithValue("@MM", MedManTb.Text);
-                    cmd.Parameters.AddWithValue("@MKey", Key);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đã lưu");
-                    Con.Close();
-                   
-                    Reset();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Bạn không có chức năng này !");
             }
         }
 
         private void DeleteBtn_Click_1(object sender, EventArgs e)
         {
-            if (Key == 0)
+            if(Permission == "Admin")
             {
-                MessageBox.Show("Chọn một dòng để xóa !");
+                if (Key == 0)
+                {
+                    MessageBox.Show("Chọn một dòng để xóa !");
+                }
+                else
+                {
+                    try
+                    {
+                        Con.Open();
+                        SqlCommand cmd = new SqlCommand("Delete from MedicineTbl where MedNum = @MKey", Con);
+                        cmd.Parameters.AddWithValue("@MKey", Key);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đã xóa");
+                        Con.Close();
+
+                        Reset();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
             else
             {
-                try
-                {
-                    Con.Open();
-                    SqlCommand cmd = new SqlCommand("Delete from MedicineTbl where MedNum = @MKey", Con);
-                    cmd.Parameters.AddWithValue("@MKey", Key);
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Đã xóa");
-                    Con.Close();
-                  
-                    Reset();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Bạn không có quyền này !");
             }
         }
         int Key = 0;
@@ -210,11 +231,7 @@ namespace QuanLyDuoc
             }
         }
 
-       
 
-
-
-       
 
         private void guna2CustomGradientPanel21_Click_1(object sender, EventArgs e)
         {
@@ -225,23 +242,44 @@ namespace QuanLyDuoc
 
         private void guna2CustomGradientPanel19_Click(object sender, EventArgs e)
         {
-            Customer obj = new Customer();
-            obj.Show();
-            this.Hide();
+            if(Permission == "Admin" || Permission == "Thu Ngân")
+            {
+                Customer obj = new Customer();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2CustomGradientPanel18_Click(object sender, EventArgs e)
         {
-            Seller obj = new Seller();
-            obj.Show();
-            this.Hide();
+            if(Permission == "Admin")
+            {
+                Seller obj = new Seller();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2CustomGradientPanel17_Click(object sender, EventArgs e)
         {
-            Manufacturer obj = new Manufacturer();
-            obj.Show();
-            this.Hide();
+            if (Permission == "Admin" || Permission == "Quản Kho")
+            {
+                Manufacturer obj = new Manufacturer();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2PictureBox34_Click(object sender, EventArgs e)
@@ -268,7 +306,14 @@ namespace QuanLyDuoc
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            ShowMedicine();
+           if(Permission == "Admin" || Permission == "Quản Kho")
+            {
+                ShowMedicine();
+            }
+           else
+            {
+                MessageBox.Show("Bạn không thể xem !");
+            }
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)

@@ -13,6 +13,7 @@ namespace QuanLyDuoc
 {
     public partial class Transacion : Form
     {
+        string Permission = Login.info.Permission;
         public Transacion()
         {
             InitializeComponent();
@@ -78,10 +79,7 @@ namespace QuanLyDuoc
             Con.Close();
         }
 
-        int n = 0, GridTotal = 0;
-
-
-        int Key = 0, Stock;
+        
 
         private void UpdateQuaty()
         {
@@ -135,7 +133,8 @@ namespace QuanLyDuoc
 
         private void guna2GradientButton1_Click_1(object sender, EventArgs e)
         {
-            insertBill();
+           
+                insertBill();
         }
 
         private void MedicinesDGV_CellClick_1(object sender, DataGridViewCellEventArgs e)
@@ -172,36 +171,61 @@ namespace QuanLyDuoc
 
         private void guna2CustomGradientPanel20_Click(object sender, EventArgs e)
         {
-            Medicne obj = new Medicne();
-            obj.Show();
-            this.Hide();
+            if(Permission == "Admin" || Permission == "Quản Kho")
+            {
+                Medicne obj = new Medicne();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2CustomGradientPanel19_Click(object sender, EventArgs e)
         {
-            Customer obj = new Customer();
-            obj.Show();
-            this.Hide();
+            if (Permission == "Admin" || Permission == "Quản Kho")
+            {
+                Customer obj = new Customer();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2CustomGradientPanel18_Click(object sender, EventArgs e)
         {
-            Seller obj = new Seller();
-            obj.Show();
-            this.Hide();
+            if (Permission == "Admin" || Permission == "Quản Kho")
+            {
+                Seller obj = new Seller();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
         private void guna2CustomGradientPanel17_Click(object sender, EventArgs e)
         {
-            Manufacturer obj = new Manufacturer();
-            obj.Show();
-            this.Hide();
+            if (Permission == "Admin" || Permission == "Quản Kho")
+            {
+                Manufacturer obj = new Manufacturer();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
         }
 
-        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
 
         private void guna2PictureBox34_Click(object sender, EventArgs e)
         {
@@ -210,10 +234,7 @@ namespace QuanLyDuoc
             this.Hide();
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+      
 
         private void FindTb_TextChanged(object sender, EventArgs e)
         {
@@ -239,6 +260,20 @@ namespace QuanLyDuoc
             CustIDCb.SelectedIndex = 0;
             guna2GradientButton1.Enabled = false;
             AddBillBtn.Enabled = false;
+            guna2GradientButton1.Enabled = false;
+            if(Permission == "Admin" || Permission == "Thu Ngân")
+            {
+                guna2GradientButton1.Enabled = true;
+            }
+            else
+            {
+                guna2GradientButton1.Enabled = false;
+            }
+        }
+
+        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void Find()
@@ -253,28 +288,41 @@ namespace QuanLyDuoc
             Con.Close();
         }
 
+        int n = 0, GridTotal = 0;
+
+
+        int Key = 0, Stock;
+
         private void AddBillBtn_Click(object sender, EventArgs e)
         {
-            if (MedQtyTb.Text == "" || Convert.ToInt32(MedQtyTb.Text) > Stock)
+            if(Permission == "Admin" || Permission == "Thu Ngân")
             {
-                MessageBox.Show("Vui lòng nhập lại số lượng !");
+                if (MedQtyTb.Text == "" || Convert.ToInt32(MedQtyTb.Text) > Stock)
+                {
+                    MessageBox.Show("Vui lòng nhập lại số lượng !");
+                }
+                else
+                {
+                    int total = Convert.ToInt32(MedQtyTb.Text) * Convert.ToInt32(MedPriceTb.Text);
+                    DataGridViewRow newRow = new DataGridViewRow();
+                    newRow.CreateCells(BillDGV);
+                    newRow.Cells[0].Value = n + 1;
+                    newRow.Cells[1].Value = MedNameTb.Text;
+                    newRow.Cells[2].Value = MedQtyTb.Text;
+                    newRow.Cells[3].Value = MedPriceTb.Text;
+                    newRow.Cells[4].Value = total;
+                    BillDGV.Rows.Add(newRow);
+                    //BillDGV.Rows.Remove(newRow);
+                    GridTotal += total;
+                    BillLbl.Text = "Thành tiền " + GridTotal;
+                    n++;
+                    UpdateQuaty();
+
+                }
             }
             else
             {
-                int total = Convert.ToInt32(MedQtyTb.Text) * Convert.ToInt32(MedPriceTb.Text);
-                DataGridViewRow newRow = new DataGridViewRow();
-                newRow.CreateCells(BillDGV);
-                newRow.Cells[0].Value = n + 1;
-                newRow.Cells[1].Value = MedNameTb.Text;
-                newRow.Cells[2].Value = MedQtyTb.Text;
-                newRow.Cells[3].Value = MedPriceTb.Text;
-                newRow.Cells[4].Value = total;
-                BillDGV.Rows.Add(newRow);
-                GridTotal += total;
-                BillLbl.Text = "Thành tiền " + GridTotal;
-                n++;
-                UpdateQuaty();
-
+                MessageBox.Show("Bạn không có quyền này !");
             }
         }
     }

@@ -13,7 +13,7 @@ namespace QuanLyDuoc
 {
     public partial class Manufacturer : Form
     {
-        string IdAcount = "", Email = "", Pass = "", Permission = "";
+        string Permission = Login.info.Permission;
         public Manufacturer()
         {
             InitializeComponent();
@@ -22,16 +22,7 @@ namespace QuanLyDuoc
 
         SqlConnection Con = new SqlConnection(@"Data Source=.\MSSQL_EXP_2008R2;Initial Catalog=HealthCare;Integrated Security=True");
 
-        public Manufacturer(string IdAcount, string Email, string Pass, string Permission)
-        {
-            InitializeComponent();
-
-            this.IdAcount = IdAcount;
-            this.Email = Email;
-            this.Pass = Pass;
-            this.Permission = Permission;
-
-        }
+       
         private void ShowManufacturer()
         {
             Con.Open();
@@ -41,7 +32,6 @@ namespace QuanLyDuoc
             DataTable dt = new DataTable();
             sda.Fill(dt);
             ManufacturerDGV.DataSource = dt;
-           // Manufacturer obj = new Manufacturer(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), dt.Rows[0][3].ToString());
             Con.Close();
         }
 
@@ -61,7 +51,7 @@ namespace QuanLyDuoc
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-           if(Permission == "Admin")
+           if(Permission == "Admin" || Permission == "Quản Kho")
             {
                 if (ManAddTb.Text == "" || ManPhoneTb.Text == "" || ManNameTb.Text == "")
                 {
@@ -98,7 +88,7 @@ namespace QuanLyDuoc
 
         private void EditBtn_Click_1(object sender, EventArgs e)
         {
-           if(Permission == "Admin")
+           if(Permission == "Admin" || Permission == "Quản Kho")
             {
                 if (ManAddTb.Text == "" || ManPhoneTb.Text == "" || ManNameTb.Text == "")
                 {
@@ -201,11 +191,6 @@ namespace QuanLyDuoc
             }
         }
 
-        
-
-       
-
-       
 
         private void guna2CustomGradientPanel21_Click_1(object sender, EventArgs e)
         {
@@ -216,25 +201,46 @@ namespace QuanLyDuoc
 
         private void guna2CustomGradientPanel20_Click_1(object sender, EventArgs e)
         {
-            Medicne obj = new Medicne();
-            obj.Show();
-            this.Hide();
+            if(Permission == "Admin" || Permission == "Quản Kho")
+            {
+                Medicne obj = new Medicne();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
 
         }
 
         private void guna2CustomGradientPanel19_Click_1(object sender, EventArgs e)
         {
-            Customer obj = new Customer();
-            obj.Show();
-            this.Hide();
+            if (Permission == "Admin" || Permission == "Thu Ngân")
+            {
+                Customer obj = new Customer();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
 
         }
 
         private void guna2CustomGradientPanel18_Click_1(object sender, EventArgs e)
         {
-            Seller obj = new Seller();
-            obj.Show();
-            this.Hide();
+            if (Permission == "Admin" )
+            {
+                Seller obj = new Seller();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Không thể truy cập !");
+            }
 
         }
 
@@ -258,7 +264,14 @@ namespace QuanLyDuoc
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            ShowManufacturer();
+            if(Permission == "Admin" || Permission == "Quản Kho")
+            {
+                ShowManufacturer();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không thể xem !");
+            }
         }
 
         private void ManNameTb_TextChanged(object sender, EventArgs e)
@@ -281,6 +294,7 @@ namespace QuanLyDuoc
 
         private void Manufacturer_Load(object sender, EventArgs e)
         {
+            ManJDate.Value = DateTime.Now;
             SaveBtn.Enabled = false;
             EditBtn.Enabled = false;
             DeleteBtn.Enabled = false;

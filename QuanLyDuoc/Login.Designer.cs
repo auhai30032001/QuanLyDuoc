@@ -239,7 +239,7 @@ namespace QuanLyDuoc
             this.label1.Size = new System.Drawing.Size(228, 23);
             this.label1.TabIndex = 44;
             this.label1.Text = "Bạn muốn đổi mật khẩu?";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // guna2Button1
             // 
